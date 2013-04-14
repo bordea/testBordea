@@ -15,7 +15,7 @@ class Peeler {
 class Apple {
     Apple getPeeled() { return Peeler.peel(this); }
 }
-public class PassingThis {
+public class PassingThis{
     public static void main(String[] args) {
         new Person().eat(new Apple());
     }
