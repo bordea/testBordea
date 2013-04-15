@@ -77,13 +77,13 @@ public class FirstProject{
         }
     }
     public static void main(String args[]){
-        TheVeryFirst();
+/*        TheVeryFirst();
         String str1="Bordea", str2 = "David";
         char c1 = 'C';
         StringVariables(str1, str2,c1);
         StringVar();
         AgeGroup();
-        Country();
+        Country(); */
         TimesTable();
         OddNumbers();
     }
