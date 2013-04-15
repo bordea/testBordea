@@ -101,7 +101,7 @@ public class FirstProject{
         System.out.println(" and the Maximum odd number is " + max);
     }
     public static void main(String args[]){
-/*        TheVeryFirst();
+        TheVeryFirst();
         String str1="Bordea", str2 = "David";
         char c1 = 'C';
         StringVariables(str1, str2,c1);
@@ -109,7 +109,7 @@ public class FirstProject{
         AgeGroup();
         Country();
         TimesTable();
-        OddNumbers();   */
+        OddNumbers();
         ArrayOperations();
     }
 }
