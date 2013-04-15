@@ -61,6 +61,21 @@ public class FirstProject{
                                 System.out.println("You're living in South America");
                             else System.out.println("You're illiterate!!!");
     }
+    static void TimesTable(){
+        for (int i = 1; i<9; i++){
+            for (int j = 1; j<9; j++){
+                System.out.print(i + " x " + j + " = " + (i*j) + "   |   ");
+            }
+            System.out.println();
+        }
+    }
+    static void OddNumbers(){
+        for (int i = 1; i<15; i++){
+            if ((i%2)!=0)
+                System.out.println(i + " is an odd number");
+            else System.out.println(i + " is an even number");
+        }
+    }
     public static void main(String args[]){
         TheVeryFirst();
         String str1="Bordea", str2 = "David";
@@ -69,5 +84,7 @@ public class FirstProject{
         StringVar();
         AgeGroup();
         Country();
+        TimesTable();
+        OddNumbers();
     }
 }
