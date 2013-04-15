@@ -76,6 +76,30 @@ public class FirstProject{
             else System.out.println(i + " is an even number");
         }
     }
+    static void ArrayOperations(){
+        int dim = 6, sum = 0, average = 0, max = 0, indice = 0;
+        Integer[] arr = {23, 6 ,47, 35, 2, 14, 23, 55, 19, 54, 42, 31, 27, 14, 13, 48};
+        for (int i = 1; i<arr.length; i++)
+            sum += arr[i];
+        average = (sum/arr.length);
+        System.out.print("The Sum is " + sum + " and the Average is " + average);
+        for (int i = 1; i<arr.length; i++)
+            if (arr[i]>max)
+                max = arr [i];
+        System.out.println(" and the Max is " + max);
+        sum = 0;max = 0;average = 0;
+        for (int i = 1; i<arr.length; i++)
+            if ((arr[i]%2) != 0){
+                sum+=arr[i];
+                indice++;
+            }
+        average = (sum/indice);
+        System.out.print("The Sum of the odd numbers is " + sum + " and their Average odd number is " + average);
+        for (int i = 1; i<arr.length; i++)
+            if ((arr[i]>max) && ((arr[i]%2) != 0))
+                max = arr[i];
+        System.out.println(" and the Maximum odd number is " + max);
+    }
     public static void main(String args[]){
 /*        TheVeryFirst();
         String str1="Bordea", str2 = "David";
@@ -83,8 +107,9 @@ public class FirstProject{
         StringVariables(str1, str2,c1);
         StringVar();
         AgeGroup();
-        Country(); */
+        Country();
         TimesTable();
-        OddNumbers();
+        OddNumbers();   */
+        ArrayOperations();
     }
 }
