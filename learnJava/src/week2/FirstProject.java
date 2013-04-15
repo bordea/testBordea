@@ -42,8 +42,24 @@ public class FirstProject{
                 break;
             default:
                 System.out.println("You have finished gymnasium");
-
         }
+    }
+    static void Country(){
+        Scanner user_input = new Scanner( System.in );
+        String tara;
+        System.out.print("Pick a country from romania, china, egipt, sua si peru: ");
+        tara = user_input.next ();
+        if (tara.equals("romania"))
+            System.out.println("You're living in Europe");
+        else if (tara.equals("china"))
+            System.out.println("You're living in Asia");
+             else if (tara.equals("egipt"))
+                      System.out.println("You're living in Africa");
+                  else if (tara.equals("sua"))
+                            System.out.println("You're living in North America");
+                       else if (tara.equals("peru"))
+                                System.out.println("You're living in South America");
+                            else System.out.println("You're illiterate!!!");
     }
     public static void main(String args[]){
         TheVeryFirst();
@@ -52,5 +68,6 @@ public class FirstProject{
         StringVariables(str1, str2,c1);
         StringVar();
         AgeGroup();
+        Country();
     }
 }
