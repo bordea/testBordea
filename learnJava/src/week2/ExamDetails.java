@@ -13,5 +13,8 @@ public class ExamDetails {
 
         String score = aStudent.examScore(30);
         System.out.println(" And the mark is --> " + score );
+
+        String grade = aStudent.examGrade(30);
+        System.out.print("The grade --> " + grade);
     }
 }

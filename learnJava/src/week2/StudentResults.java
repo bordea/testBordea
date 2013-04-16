@@ -1,7 +1,7 @@
 package week2;
 
 public class StudentResults {
-    private String Full_Name, Exam_Name, Exam_Score, Exam_Grade;
+    String Full_Name, Exam_Name, Exam_Score, Exam_Grade;
     StudentResults(){
         Full_Name = "No given name";
         Exam_Name = "Unknown";
@@ -44,5 +44,9 @@ public class StudentResults {
         else if (aScore>40)
             examGrade = "A";
         return "The Grade is " + examGrade;
+    }
+    String examGrade(int aScore) {
+        Exam_Grade = this.getGrade( aScore) ;               // Exam_Grade = getGrade( aScore ); --> same thing
+        return Exam_Grade;
     }
 }
