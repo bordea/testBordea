@@ -27,18 +27,23 @@ public class Student extends User{
     public void setUniversity(String university) {
         this.university = university;
     }
-  //utcn over 5 and ubb over 9     --> true = ok
+    //utcn over 5 and ubb over 9     --> true = ok
 
-    public boolean smart(int avg, String uni){
+    public boolean smart(){
         boolean bool = false;
-        if (uni.equals("UTCN")){
-            if (avg>5)
+        System.out.println("bool before the if --> " + bool);
+        if (university.equals("UTCN")){
+            if (averageMark>5){
                 bool=true;
+            }
+            System.out.println("bool before the if --> " + bool);
         }
-        else if (uni.equals("UBB")){
-                if (avg>9)
-                    bool=true;
+        else if (university.equals("UBB")){
+            if (averageMark>9){
+                bool=true;
+            }
         }
+        System.out.println("bool after the if --> " + bool);
         return bool;
     }
 

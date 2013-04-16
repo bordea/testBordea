@@ -32,8 +32,8 @@ public class MainInheritance {
         System.out.println(radu);
         System.out.println(radu.getAge());
         System.out.println(radu.getUniversity());
-        radu.setUniversity("UTCN");
+//        radu.setUniversity("UTCN");
         System.out.println(radu.getUniversity());
-        System.out.println("Is Radu smart? " + radu.smart(10,"UBB"));
+        System.out.println("Is Radu smart? " + radu.smart());
     }
 }
