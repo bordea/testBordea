@@ -8,8 +8,7 @@ public class Certificates extends StudentResults {
     }
 
     String certificateAwarded(int aScore){
-        String aGrade = examGrade(ascore);
-
+        String aGrade = examGrade(aScore);
         if (aGrade.equals("Grade is A"))
             this.certificate = "Certificate of Excellence";
         else if (aGrade.equals("Grade is B"))
