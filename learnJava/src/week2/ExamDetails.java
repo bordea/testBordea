@@ -16,6 +16,8 @@ public class ExamDetails {
         Certificates c1 = new Certificates();
         String exam = c1.examName("J2");
         System.out.println("the name of the exam is " + exam);
+        String award = c1.certificateAwarded(40);
+        System.out.println( exam + " " + award );
 
     }
 }
