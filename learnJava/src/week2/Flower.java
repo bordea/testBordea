@@ -28,5 +28,12 @@ public class Flower {
     public static void main(String[] args) {
         Flower x = new Flower();
         x.printPetalCount();
+        System.out.println(suma());
+    }
+    static int suma(){
+        int sum = 0;
+        for (int i = 1; i<101; i++)
+             sum+=i;
+        return sum;
     }
 }
