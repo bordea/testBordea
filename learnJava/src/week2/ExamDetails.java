@@ -5,6 +5,10 @@ public class ExamDetails {
         StudentResults aStudent = new StudentResults();
         aStudent.Exam_Name = "JAVA Exam";
         System.out.println(aStudent.Exam_Name);
+        String bName = aStudent.fullName("Steven Jobs");
+        System.out.println( bName );
+        String exam = aStudent.examName("C2");
+        System.out.println("The name of the exam is --> " + exam);
 
 
     }
