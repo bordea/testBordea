@@ -7,9 +7,11 @@ public class ExamDetails {
         System.out.println(aStudent.Exam_Name);
         String bName = aStudent.fullName("Steven Jobs");
         System.out.println( bName );
+
         String exam = aStudent.examName("C2");
-        System.out.println("The name of the exam is --> " + exam);
+        System.out.print("The name of the exam is --> " + exam);
 
-
+        String score = aStudent.examScore(30);
+        System.out.println(" And the mark is --> " + score );
     }
 }
