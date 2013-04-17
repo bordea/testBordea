@@ -10,7 +10,7 @@ package week3;
 public class User {   // this is a a class , the User class
 
     protected int id;  // instance variable           // 3 types : private (only in the class), protected (in the subclasses)
-//                                                              public - everywhere
+    //                                                              public - everywhere
     protected String name ;  // second instance variable
 
     protected int age;
@@ -35,21 +35,24 @@ public class User {   // this is a a class , the User class
         this.name = name;
     }
 
-    // constructor that construct an object given a id
+    // constructor that construct an object given an id
     public User(int idNum) {
         this.id = idNum;
     }
 
+    // constructor that construct an object given a name and age
     public User (String name, int age){
         this.name = name;
         this.age = age;
     }
 
+    // constructor that construct an object given an id and age
     public User (int id, int age){
         this.id=id;
         this.age=age;
     }
 
+    // constructor that construct an object given a name, age and a country
     public User (String name, int age, String country){
         this.name = name;
         this.age = age;
@@ -65,16 +68,27 @@ public class User {   // this is a a class , the User class
             return "Young";
     }
 
-     // this is the getter age
-     public int getAge(){
-         return age;
-     }
+    // this is the getter age
+    public int getAge(){
+        return age;
+    }
 
-     // this is the setter age
-     public void setAge(int newAge){
-          this.age = newAge;
-     }
+    // this is the setter age
+    public void setAge(int newAge){
+        this.age = newAge;
+    }
 
+    // this is the getter country
+    public String getCountry(){
+        return country;
+    }
+
+    // this is the setter country
+    public void setCountry(int newCountry){
+        this.age = newCountry;
+    }
+
+    //this is the method that return true if the user is from Romania and false if not
     public boolean isFromRomania(){
         boolean bool=false;
         if (this.country.equals("Romania"))

@@ -38,6 +38,7 @@ public class MainInheritance {
 
         User silvia = new User("Silvia Bordea",56,"Romania");
         System.out.println(silvia);
-
+        System.out.println(silvia.getAge());
+        System.out.println(silvia.getCountry());
     }
 }
