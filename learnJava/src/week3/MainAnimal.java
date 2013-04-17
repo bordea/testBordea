@@ -26,6 +26,16 @@ public class MainAnimal {
         System.out.println(firstHorse);
         System.out.println(firstHorse.getNickname() + " is lucky --> " + firstHorse.isLucky() + " because its color is " +
                 firstHorse.getColor());
+        System.out.println(firstHorse.getNickname() + " is fast --> " + firstHorse.isFast() + " because its speed is " +
+                firstHorse.getSpeed());
+        firstHorse.setSpeed(30);
+        System.out.println(firstHorse.getNickname() + " is fast --> " + firstHorse.isFast() + " because its speed is " +
+                firstHorse.getSpeed());
+
+        Horse secondHorse = new Horse ("John",40,"Jonathan");
+        System.out.println(secondHorse);
+        System.out.println(secondHorse.getNickname() + " is fast --> " + secondHorse.isFast() + " because its speed is " +
+                secondHorse.getSpeed());
 
     }
 }
