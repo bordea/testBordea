@@ -22,6 +22,10 @@ public class MainAnimal {
         System.out.println(dogAnimal.getNickname() + " is lucky --> " + dogAnimal.isLucky() + " because its color is " +
                                 dogAnimal.getColor());
 
+        Horse firstHorse = new Horse("Bator", "white", 20, "Traian");
+        System.out.println(firstHorse);
+        System.out.println(firstHorse.getNickname() + " is lucky --> " + firstHorse.isLucky() + " because its color is " +
+                firstHorse.getColor());
 
     }
 }

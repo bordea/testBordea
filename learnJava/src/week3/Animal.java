@@ -64,7 +64,8 @@ public class Animal {   // String nickName, color  ; int averageage ,    , metho
         return bool;
     }
 
-    // this is the method that returns the whole user details nicely in a String
+
+    // this is the method that returns the whole animal details nicely in a String
     public String toString() {
         return "The Animal{ " +
                 "Nickname - " + nick +
