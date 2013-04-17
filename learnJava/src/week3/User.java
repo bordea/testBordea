@@ -11,10 +11,11 @@ public class User {   // this is a a class , the User class
 
     protected int id;  // instance variable           // 3 types : private (only in the class), protected (in the subclasses)
 //                                                              public - everywhere
-
     protected String name ;  // second instance variable
 
     protected int age;
+
+    protected String country;
 
     //TODO add country
 
@@ -49,6 +50,8 @@ public class User {   // this is a a class , the User class
         this.age=age;
     }
 
+
+
     public String ageGroup(){
         System.out.println("... in ageGroup method ... with object " + this);
         System.out.println("... in ageGroup method ... with object age " + this.age);
@@ -67,6 +70,13 @@ public class User {   // this is a a class , the User class
      public void setAge(int newAge){
           this.age = newAge;
      }
+
+    public boolean isFromRomania(String country){
+        boolean bool=false;
+        if (this.country.equals("Romania"))
+            bool = true;
+        return bool;
+    }
 
     public String toString() {
         return "User{" +
