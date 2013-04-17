@@ -28,6 +28,22 @@ public class Animal {   // String nickName, color  ; int averageage ,    , metho
         this.benefit = benefit;
     }
 
+    // this is the constructor for an animal with nickname and average age
+    public Animal(String nickname, int avgAge){
+        this.nick = nickname;
+        this.avgAge = avgAge;
+    }
+
+
+    // this is the getter for the color
+    public  String getColor(){
+        return color;
+    }
+
+    // this is the setter for the color
+    public void setColor(String newColor){
+        this.color = newColor;
+    }
 
     // this is the getter for the name
     public  String getNickname(){
@@ -42,8 +58,9 @@ public class Animal {   // String nickName, color  ; int averageage ,    , metho
     // this method tells if an animal is lucky(purple)
     public boolean isLucky(){
         boolean bool = false;
-        if (this.color.equals("purple"))
+        if (this.color.equals("purple")){
             bool = true;
+        }
         return bool;
     }
 
