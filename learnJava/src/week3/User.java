@@ -59,6 +59,7 @@ public class User {   // this is a a class , the User class
         this.country = country;
     }
 
+    // this is the method that return old or young depending on age ( < > 50 )
     public String ageGroup(){
         System.out.println("... in ageGroup method ... with object " + this);
         System.out.println("... in ageGroup method ... with object age " + this.age);
@@ -66,6 +67,16 @@ public class User {   // this is a a class , the User class
             return "Old";
         else
             return "Young";
+    }
+
+    // this is the getter name
+    public String getName(){
+        return name;
+    }
+
+    // this is the setter name
+    public String setName(String newName){
+        return newName;
     }
 
     // this is the getter age
@@ -96,6 +107,7 @@ public class User {   // this is a a class , the User class
         return bool;
     }
 
+    //  this is the method that putts together all the user details in a card
     public String toString() {
         return "User{ " +
                 "id= " + id +

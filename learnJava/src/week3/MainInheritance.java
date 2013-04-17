@@ -40,5 +40,6 @@ public class MainInheritance {
         System.out.println(silvia);
         System.out.println(silvia.getAge());
         System.out.println(silvia.getCountry());
+        System.out.println(silvia.getName() + " is from Romania --> " + silvia.isFromRomania());
     }
 }
