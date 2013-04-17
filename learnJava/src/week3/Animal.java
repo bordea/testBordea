@@ -13,7 +13,7 @@ public class Animal {   // String nickName, color  ; int averageage ,    , metho
     //this is the default Animal constructor
     public Animal(){}
 
-    //
+    //  this is an Animal constructor used to create Animal objects
     public Animal(String nickname, String color, int avgAge){
         this.nick = nickname;
         this.color = color;
