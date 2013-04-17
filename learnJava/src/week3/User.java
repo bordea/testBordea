@@ -59,6 +59,13 @@ public class User {   // this is a a class , the User class
         this.country = country;
     }
 
+    public User (int id, String name, int age, String country){
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.country=country;
+    }
+
     // this is the method that return old or young depending on age ( < > 50 )
     public String ageGroup(){
         System.out.println("... in ageGroup method ... with object " + this);
@@ -111,7 +118,7 @@ public class User {   // this is a a class , the User class
     public String toString() {
         return "User{ " +
                 "id= " + id +
-                ", name= " + name + '\'' +
+                ", name= " + name  +
                 ", varsta= " + age +
                 ", country= " + country +
                 " }"
