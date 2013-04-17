@@ -35,5 +35,9 @@ public class MainInheritance {
 //        radu.setUniversity("UTCN");
         System.out.println(radu.getUniversity());
         System.out.println("Is Radu smart? " + radu.smart());
+
+        User silvia = new User("Silvia Bordea",56,"Romania");
+        System.out.println(silvia);
+
     }
 }

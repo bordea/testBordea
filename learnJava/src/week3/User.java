@@ -50,7 +50,11 @@ public class User {   // this is a a class , the User class
         this.age=age;
     }
 
-
+    public User (String name, int age, String country){
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
 
     public String ageGroup(){
         System.out.println("... in ageGroup method ... with object " + this);
@@ -71,7 +75,7 @@ public class User {   // this is a a class , the User class
           this.age = newAge;
      }
 
-    public boolean isFromRomania(String country){
+    public boolean isFromRomania(){
         boolean bool=false;
         if (this.country.equals("Romania"))
             bool = true;
@@ -79,10 +83,12 @@ public class User {   // this is a a class , the User class
     }
 
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}' + ", varsta=" + age
+        return "User{ " +
+                "id= " + id +
+                ", name= " + name + '\'' +
+                ", varsta= " + age +
+                ", country= " + country +
+                " }"
                 ;
     }
 }
