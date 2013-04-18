@@ -5,20 +5,20 @@ public class Country {
     protected int code;
     protected boolean eu;
 
-    public class(){};
+    public Country(){};
 
-    public class Country (String name, int code, boolean eu){
+    public Country (String name, int code, boolean eu){
         this.name = name;
         this.code = code;
         this.eu = eu;
     }
 
-    public class Country (String name, boolean eu ){
+    public Country (String name, boolean eu ){
         this.name = name;
         this.eu = eu;
     }
 
-    public class Country(String name, int code){
+    public Country(String name, int code){
         this.name = name;
         this.code = code;
     }
