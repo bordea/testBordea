@@ -90,14 +90,14 @@ public class BibleotecaMain {
     }
 
     private static void printCartiAutor(Autor[] aArr){
-        int lenAut = aArr.length, lenBook;
+        int lenAut = aArr.length, lenBook=2;
         System.out.println();
 /*        for (int i=0; i<len;i++){
             printAuthorBooks(aArr[i]); */
-        for (int i=0; i<lenAut; i++);
-
-
-
+        for (int i=0; i<lenAut; i++);{
+            for  (int j=0; j<lenBook; j++){
+                System.out.println();
+            }
 
         }
     }
