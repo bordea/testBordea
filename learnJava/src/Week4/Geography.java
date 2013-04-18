@@ -18,6 +18,22 @@ public class Geography {
             System.out.println(array1[i]);
         }
 
+        County cluj = new County("ClujCounty",264,"CJ");
+        County arad = new County("AradCounty",253);
+        County salaj = new County("SalajCounty","SJ");
+        County dolj = new County("DoljCounty",264,"DJ");
+
+        County[] array2;
+        array2 = new County[4];
+        array2[0]=cluj;
+        array2[1]=arad;
+        array2[2]=salaj;
+        array2[3]=dolj;
+
+        for (int i=0; i<4;i++){
+            System.out.println(array2[i]);
+        }
+
 
     }
 }
