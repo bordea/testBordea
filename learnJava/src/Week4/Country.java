@@ -22,4 +22,13 @@ public class Country {
         this.name = name;
         this.code = code;
     }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "name='" + name + '\'' +
+                ", code=" + code +
+                ", eu=" + eu +
+                '}';
+    }
 }
