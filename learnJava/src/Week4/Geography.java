@@ -6,11 +6,13 @@ package Week4;
 public class Geography {
     public static void main(String args[]){
 
-        City[] cities = new City[6];
+        City[] city1 = new City[2];
+        City[] city2 = new City[2];
+        City[] city3 = new City[2];
 
-        County cluj = new County (cities,"Ardeal","CLUJ");
-        County dolj = new County (cities,"TaraRomaneasca","DOLJ");
-        County salaj = new County (cities,"Hungary","SALAJ");
+        County cluj = new County (city1,"Ardeal","CLUJ");
+        County dolj = new County (city2,"TaraRomaneasca","DOLJ");
+        County salaj = new County (city3,"Hungary","SALAJ");
 
         City clujNapoca = new City(cluj,"Cluj-Napoca");
         City huedin = new City(cluj,"Huedin");
@@ -19,12 +21,12 @@ public class Geography {
         City zalau = new City(salaj,"Zalau");
         City oradea = new City(salaj,"Oradea");
 
-        cities[0] = clujNapoca;
-        cities[1] = huedin;
-        cities[2] = craiova;
-        cities[3] = slatina;
-        cities[4] = zalau;
-        cities[5] = oradea;
+        city1[0] = clujNapoca;
+        city1[1] = huedin;
+        city2[0] = craiova;
+        city2[1] = slatina;
+        city3[0] = zalau;
+        city3[1] = oradea;
 
         System.out.println(cluj);
 
