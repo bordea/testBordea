@@ -1,8 +1,52 @@
 package Week4;
 
+//  County : City[] cities  ,  Country  , name
+//  City   : County judet ,  name
+
 public class Geography {
     public static void main(String args[]){
-        Country rom = new Country("Romania",40,false);
+
+        City[] cities = new City[6];
+
+        County cluj = new County (cities,"Ardeal","CLUJ");
+        County dolj = new County (cities,"TaraRomaneasca","DOLJ");
+        County salaj = new County (cities,"Hungary","SALAJ");
+
+        City clujNapoca = new City(cluj,"Cluj-Napoca");
+        City huedin = new City(cluj,"Huedin");
+        City craiova = new City(dolj,"Craiova");
+        City slatina = new City(dolj,"Slatina");
+        City zalau = new City(salaj,"Zalau");
+        City oradea = new City(salaj,"Oradea");
+
+        cities[0] = clujNapoca;
+        cities[1] = huedin;
+        cities[2] = craiova;
+        cities[3] = slatina;
+        cities[4] = zalau;
+        cities[5] = oradea;
+
+        System.out.println(cluj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* Country rom = new Country("Romania",40,false);
         Country uk = new Country("UnitedKindgom",39,true);
         Country ire = new Country("Ireland",false);
         Country usa = new Country("UnitatedStates",52);
@@ -43,6 +87,6 @@ public class Geography {
 
         Continent europa = new Continent("Europa",array1,0101);
 
-        System.out.println(europa);
+        System.out.println(europa);  */
     }
 }

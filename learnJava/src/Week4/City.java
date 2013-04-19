@@ -3,21 +3,37 @@ package Week4;
 import java.util.Arrays;
 
 public class City {
-    Country[] tara;
-    County[] judet;
+    protected County judet;
+    protected String name;
 
     public City(){}
 
-    public City(Country[] array1, County[] array2){
-        this.tara = array1;
-        this.judet = array2;
+    public City(County judet,String name){
+        this.judet = judet;
+        this.name = name;
+    }
+
+    public County getJudet() {
+        return judet;
+    }
+
+    public void setJudet(County judet) {
+        this.judet = judet;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
         return "City{" +
-                "tara=" + Arrays.toString(tara) +
-                ", judet=" + Arrays.toString(judet) +
+                "judet=" + judet +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
