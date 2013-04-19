@@ -41,7 +41,7 @@ public class Autor {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", dob=" + dob +
-                ", bookArray=" + Arrays.toString(bookArray) +
+ //               ", bookArray=" + Arrays.toString(bookArray) +
                 '}';
     }
 }

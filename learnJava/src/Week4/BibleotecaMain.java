@@ -92,9 +92,6 @@ public class BibleotecaMain {
     private static void printCartiAutor(Autor[] aArr){
         int lenAut = aArr.length;
 
-        System.out.println();
-/*        for (int i=0; i<len;i++){
-            printAuthorBooks(aArr[i]); */
         for (int i=0; i<=lenAut; i++);{
             System.out.println("Pentru Autorul ");
             for  (int j=0; j<(aArr[j].getBookArray().length); j++){
