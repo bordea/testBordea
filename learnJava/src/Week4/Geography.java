@@ -41,5 +41,8 @@ public class Geography {
 
         System.out.println(clujNapoca);
 
+        Continent europa = new Continent("Europa",array1,0101);
+
+        System.out.println(europa);
     }
 }
