@@ -95,8 +95,8 @@ public class BibleotecaMain {
         System.out.println();
 /*        for (int i=0; i<len;i++){
             printAuthorBooks(aArr[i]); */
-        for (int i=0; i<lenAut; i++);{
-            System.out.println("Pentru Autorul "+ aArr[i].name);
+        for (int i=0; i<=lenAut; i++);{
+            System.out.println("Pentru Autorul ");
             for  (int j=0; j<(aArr[j].getBookArray().length); j++){
                 System.out.println(aArr[j].getBookArray() );
             }

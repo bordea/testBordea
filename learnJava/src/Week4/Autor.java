@@ -1,5 +1,6 @@
 package Week4;
 
+import java.util.Arrays;
 import java.util.Date;
 
 //id , name and dob
@@ -40,6 +41,7 @@ public class Autor {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", dob=" + dob +
+                ", bookArray=" + Arrays.toString(bookArray) +
                 '}';
     }
 }
