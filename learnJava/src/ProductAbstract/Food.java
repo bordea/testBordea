@@ -1,6 +1,6 @@
 package ProductAbstract;
 
-public class Food extends Product{
+public abstract class Food extends Product{
 
     protected String name;
 
