@@ -31,7 +31,7 @@ public class Geography {
         city3[1] = oradea;
 
         int sum = 0;
-        sum = sumPopulation(clujNapoca);
+        sum = sumPopulation(city1);
         System.out.println("Orasul" + sum);
 
 //        printCityArray(city1);
@@ -41,14 +41,20 @@ public class Geography {
         printCityArray(city1);*/
     }
 
-    private static int sumPopulation(City clujNapoca) {
+    private static int sumPopulation(City[] cityName) {
+        int theSum = 0;
+        for (int i=0 ; i<cityName.length; i++){
+            theSum += cityName[i].population;
+        }
+        return theSum;
     }
+
 
     private static void printCityArray(City[] cities){
         System.out.println("Now we're printing the cities array");
         for (int i=0;i< (cities.length); i++){
             System.out.println("Printing element number" + i + " --> " + cities[i].getJudet() +
-                       cities[i].getName() + cities[i].getBrut() + cities[i].getPopulation() + cities[i].getSurface());
+                    cities[i].getName() + cities[i].getBrut() + cities[i].getPopulation() + cities[i].getSurface());
         }
     }
 

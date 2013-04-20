@@ -19,13 +19,7 @@ public class City {
         this.surface = surface;
     }
 
-    public int sumPopulation(City[] cities){
-        int theSum = 0;
-        for (int i=0 ; i<cities.length; i++){
-            theSum += cities[i].population;
-        }
-        return theSum;
-    }
+
 
     public County getJudet() {
         return judet;
