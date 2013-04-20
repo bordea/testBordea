@@ -66,13 +66,22 @@ public class MainAbstract {
         System.out.println(volvoSwe);
         volvoSwe.makeNoise();
 
-        Dacia solenza =
+        Dacia solenza = new Dacia();
+        solenza.setCarModel("Dacia");
+        solenza.setSpeed(120);
+        solenza.setColor("blue");
+        solenza.setNumofGears(2);
+        solenza.setNumberOfWheels(4);
+        solenza.setNumberofdoors(4);
+
+        System.out.println(solenza);
+        solenza.makeNoise();
 
         RudimentaryVehicle rudimentaryVehicle = new RudimentaryVehicle();
         // set autovehicle properties
         rudimentaryVehicle.setCarModel("vehicle rudimentary");
         rudimentaryVehicle.setSpeed(0);
-        rudimentaryVehicle.setColor("blue");
+        rudimentaryVehicle.setColor("black");
         rudimentaryVehicle.setNumofGears(6);
         rudimentaryVehicle.setNumberOfWheels(2);
 
@@ -81,6 +90,10 @@ public class MainAbstract {
         autovehicles[1] = radusBmw;
         autovehicles[2] = vw;
         autovehicles[3] = rudimentaryVehicle;
+        autovehicles[4] = volvoSwe;
+        autovehicles[5] = solenza;
+
+        BlueVehicle(autovehicles);
 
         System.out.println("print all autovehicles-----------------------------");
         for(int i =0; i< autovehicles.length; i++){
@@ -120,7 +133,7 @@ public class MainAbstract {
 
         // radusBMW is a bmw , but is also a car or a autovehicle
         Car radusBmwcar = radusBmw;                                   // locval variable that can be assign a value
-                                                    // so radusbmw will behave like a car, because we defined as a car;
+        // so radusbmw will behave like a car, because we defined as a car;
         Autovehicle radusBmwvehicle = radusBmw;
 
 
@@ -134,5 +147,13 @@ public class MainAbstract {
         rudeRadu.setColor("unknow color");
         System.out.println(rudeRadu);
         rudeRadu.makeNoise();
+    }
+    public static void BlueVehicle(Autovehicle[] autovehicles){
+        System.out.println("The blue cars are the folowing :");
+        for (int i=0; i<autovehicles.length; i++){
+            if((autovehicles[i] != null)&&autovehicles[i].color.equals("blue")) {
+                System.out.println(autovehicles[i]);
+            }
+        }
     }
 }
