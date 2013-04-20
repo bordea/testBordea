@@ -8,7 +8,7 @@ public class Cosmetic extends Product{
 
     @Override
     public void description() {
-        System.out.println("Descrierea produsului COSMETIC" + name);
+        System.out.println("Descrierea produsului COSMETIC --> " + name);
     }
 
     public String getName() {
