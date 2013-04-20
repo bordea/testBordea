@@ -18,4 +18,6 @@ public class WebSpace extends VirtualProduct{
     public void setSize(int size) {
         Size = size;
     }
+
+
 }
