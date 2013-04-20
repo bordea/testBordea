@@ -66,6 +66,8 @@ public class MainAbstract {
         System.out.println(volvoSwe);
         volvoSwe.makeNoise();
 
+        Dacia solenza =
+
         RudimentaryVehicle rudimentaryVehicle = new RudimentaryVehicle();
         // set autovehicle properties
         rudimentaryVehicle.setCarModel("vehicle rudimentary");
