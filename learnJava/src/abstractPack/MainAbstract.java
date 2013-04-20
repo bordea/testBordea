@@ -36,6 +36,23 @@ public class MainAbstract {
         radusBmw.setNumberofdoors(5);
         //set radusBmw properties
         radusBmw.setCanDrift(true);
+        radusBmw.setKm(450000);
+
+        System.out.println(radusBmw);
+        radusBmw.makeNoise();
+
+        Bmw cristisBmw = new Bmw();
+        // set autovehicle properties
+        cristisBmw.setCarModel("radusBmw");
+        cristisBmw.setSpeed(200);
+        cristisBmw.setColor("blue");
+        cristisBmw.setNumofGears(7);
+        cristisBmw.setNumberOfWheels(4);
+        // set car properties
+        cristisBmw.setNumberofdoors(5);
+        //set radusBmw properties
+        cristisBmw.setCanDrift(true);
+        cristisBmw.setKm(850000);
 
         System.out.println(radusBmw);
         radusBmw.makeNoise();
@@ -51,6 +68,7 @@ public class MainAbstract {
         vw.setNumberofdoors(3);
         //set vw properties
         vw.setRezistenta(20);
+        vw.setKm(750000);
 
         System.out.println(vw);
         vw.makeNoise();
@@ -61,6 +79,7 @@ public class MainAbstract {
         volvoSwe.setColor("black");
         volvoSwe.setNumofGears(6);
         volvoSwe.setNumberOfWheels(6);
+        volvoSwe.setKm(150000);
         volvoSwe.setNumberofdoors(6);
 
         System.out.println(volvoSwe);
@@ -72,6 +91,7 @@ public class MainAbstract {
         solenza.setColor("blue");
         solenza.setNumofGears(2);
         solenza.setNumberOfWheels(4);
+        solenza.setKm(550000);
         solenza.setNumberofdoors(4);
 
         System.out.println(solenza);
@@ -88,10 +108,11 @@ public class MainAbstract {
         Autovehicle[] autovehicles = new Autovehicle[10];  // nothing happends, no new Autovehicle is called.
         autovehicles[0] = suzukyMotocycle;
         autovehicles[1] = radusBmw;
-        autovehicles[2] = vw;
-        autovehicles[3] = rudimentaryVehicle;
-        autovehicles[4] = volvoSwe;
-        autovehicles[5] = solenza;
+        autovehicles[2] = cristisBmw;
+        autovehicles[3] = vw;
+        autovehicles[4] = rudimentaryVehicle;
+        autovehicles[5] = volvoSwe;
+        autovehicles[6] = solenza;
 
         BlueVehicle(autovehicles);
 
@@ -107,9 +128,14 @@ public class MainAbstract {
         Autovehicle almeuBMW = autovehicles[1];
         System.out.println("my radusBmw color "+almeuBMW.getColor());
 
-        Car[] cars = new Car[3];
-        cars[0]=radusBmw;
-        cars[1]=vw;
+        Car[] cars = new Car[10];
+        cars[0] = radusBmw;
+        cars[1] = cristisBmw;
+        cars[2] = vw;
+        cars[3] = volvoSwe;
+        cars[4] = solenza;
+
+        BadNoise(cars);
 
         System.out.println("print all cars-----------------");
         for(int i =0; i< cars.length; i++){
@@ -120,7 +146,7 @@ public class MainAbstract {
 
         Bmw[] bmws = new Bmw[10];
         bmws[0]= radusBmw;
-//        bmws[1]= cristiBwm;   //TODO
+        bmws[1]= cristisBmw;
 
 
         System.out.println("print all bmw-----------------");
@@ -153,6 +179,14 @@ public class MainAbstract {
         for (int i=0; i<autovehicles.length; i++){
             if((autovehicles[i] != null)&&autovehicles[i].color.equals("blue")) {
                 System.out.println(autovehicles[i]);
+            }
+        }
+    }
+    public static void BadNoise(Car[] cars){
+        System.out.println("The noisy cars are the following :");
+        for (int i=0; i<cars.length; i++){
+            if((cars[i] != null)&&(cars[i].km>500000)) {
+                System.out.println(cars[i]);
             }
         }
     }
