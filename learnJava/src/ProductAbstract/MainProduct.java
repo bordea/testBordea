@@ -26,7 +26,29 @@ public class MainProduct {
 
         boot.description();
 
-        Castraveti
+        Castraveti greenCucumber = new Castraveti();
+        greenCucumber.setId("7g8h");
+        greenCucumber.setPrice(0.87);
+        greenCucumber.setName("CASTRAVETE VERDE");
+        greenCucumber.setKg(1);
+        greenCucumber.setRedus(true);
+
+        greenCucumber.description();
+
+        DelicatFoof cookie = new DelicatFoof();
+        cookie.setId("3e1g");
+        cookie.setPrice(1.35);
+        cookie.setName("COOKIE");
+        cookie.setKg(4);
+        cookie.setAroma("dulce");
+
+        cookie.description();
+
+
+
+
+
+
 
     }
 }
