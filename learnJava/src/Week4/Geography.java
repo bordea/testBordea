@@ -13,13 +13,15 @@ public class Geography {
         County cluj = new County (city1,"Ardeal","CLUJ");
         County dolj = new County (city2,"TaraRomaneasca","DOLJ");
         County salaj = new County (city3,"Hungary","SALAJ");
+        System.out.println(cluj);
 
-        City clujNapoca = new City(cluj,"Cluj-Napoca");
-        City huedin = new City(cluj,"Huedin");
-        City craiova = new City(dolj,"Craiova");
-        City slatina = new City(dolj,"Slatina");
-        City zalau = new City(salaj,"Zalau");
-        City oradea = new City(salaj,"Oradea");
+        City clujNapoca = new City(cluj,"Cluj-Napoca",1.1, 111, 10000);
+        City huedin = new City(cluj,"Huedin",2.2, 222, 20000);
+        City craiova = new City(dolj,"Craiova",5.5, 555, 50000);
+        City slatina = new City(dolj,"Slatina",4.4, 444, 40000);
+        City zalau = new City(salaj,"Zalau",6.6, 666, 60000);
+        City oradea = new City(salaj,"Oradea",3.3, 333, 30000);
+        System.out.println();
 
         city1[0] = clujNapoca;
         city1[1] = huedin;
@@ -27,22 +29,17 @@ public class Geography {
         city2[1] = slatina;
         city3[0] = zalau;
         city3[1] = oradea;
+        System.out.println();
 
-        System.out.println(cluj);
+        //printCityArray(city1);
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    private static void printCityArray(City[] cities){
+        for (int i=0;i< (cities.length); i++){
+            System.out.println("Printing element number" + i + " --> " + cities[i]);
+        }
+    }
 
 
 
@@ -90,5 +87,5 @@ public class Geography {
         Continent europa = new Continent("Europa",array1,0101);
 
         System.out.println(europa);  */
-    }
+
 }
