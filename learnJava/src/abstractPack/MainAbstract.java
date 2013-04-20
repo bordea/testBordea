@@ -23,7 +23,7 @@ public class MainAbstract {
 
         System.out.println(suzukyMotocycle);
         suzukyMotocycle.makeNoise();
-
+        suzukyMotocycle.standBackWheels();
 
         Bmw radusBmw = new Bmw();
         // set autovehicle properties
@@ -54,6 +54,17 @@ public class MainAbstract {
 
         System.out.println(vw);
         vw.makeNoise();
+
+        Volvo volvoSwe = new Volvo();
+        volvoSwe.setCarModel("Volvo");
+        volvoSwe.setSpeed(120);
+        volvoSwe.setColor("black");
+        volvoSwe.setNumofGears(6);
+        volvoSwe.setNumberOfWheels(6);
+        volvoSwe.setNumberofdoors(6);
+
+        System.out.println(volvoSwe);
+        volvoSwe.makeNoise();
 
         RudimentaryVehicle rudimentaryVehicle = new RudimentaryVehicle();
         // set autovehicle properties

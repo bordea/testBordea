@@ -9,7 +9,7 @@ public class Caruta extends RudimentaryVehicle {
 
     @Override
     public void makeNoise() {                               // is not mandatory
-        System.out.println("caruta noise ..." + countHorse + " magnitude");                                    //overiwrite la metoda din superclasa.parinte
+        System.out.println("caruta noise ..." + countHorse + " magnitude");       //overiwrite la metoda din superclasa.parinte
     }
 
     public int getCountHorse() {

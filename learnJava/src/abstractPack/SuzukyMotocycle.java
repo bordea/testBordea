@@ -12,6 +12,10 @@ public class SuzukyMotocycle extends Motocycle{
         System.out.println("SuzukyMotocycle noise");
     }
 
+    public void standBackWheels(){
+        System.out.println("This Autovehicle can stand on its back wheels");
+    }
+
     public Date getBestSpeed() {
         return bestSpeed;
     }
