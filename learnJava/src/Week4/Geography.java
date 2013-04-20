@@ -30,16 +30,18 @@ public class Geography {
         city3[0] = zalau;
         city3[1] = oradea;
 
-
-
-        System.out.println(cluj);
-        System.out.println(clujNapoca);
         printCityArray(city1);
+
+ /*       System.out.println(cluj);
+        System.out.println(clujNapoca);
+        printCityArray(city1);*/
     }
 
     private static void printCityArray(City[] cities){
+        System.out.println("Now we're printing the cities array");
         for (int i=0;i< (cities.length); i++){
-            System.out.println("Printing element number" + i + " --> " + cities[i]);
+            System.out.println("Printing element number" + i + " --> " + cities[i].getJudet() +
+                                    cities[i].judet + cities[i].brut + cities[i].population + cities[i].surface);
         }
     }
 
