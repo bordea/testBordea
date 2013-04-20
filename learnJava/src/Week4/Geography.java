@@ -21,7 +21,7 @@ public class Geography {
         City slatina = new City(dolj,"Slatina",4.4, 444, 40000);
         City zalau = new City(salaj,"Zalau",6.6, 666, 60000);
         City oradea = new City(salaj,"Oradea",3.3, 333, 30000);
-        System.out.println();
+        System.out.println(clujNapoca);
 
         city1[0] = clujNapoca;
         city1[1] = huedin;
@@ -29,10 +29,12 @@ public class Geography {
         city2[1] = slatina;
         city3[0] = zalau;
         city3[1] = oradea;
-        System.out.println();
 
-        //printCityArray(city1);
 
+
+        System.out.println(cluj);
+        System.out.println(clujNapoca);
+        printCityArray(city1);
     }
 
     private static void printCityArray(City[] cities){

@@ -3,34 +3,34 @@ package Week4;
 import java.util.Arrays;
 
 public class Country {
-    protected County[] county;
+    protected County[] counties;
     protected String name;
     protected int pop;
 
     public Country() {} ;
 
-    public Country (County [] county, String name, int pop){
-        this.county = county;
+    public Country (County [] counties, String name, int pop){
+        this.counties = counties;
         this.name = name;
         this.pop = pop;
     }
 
-    public Country(County[] county, String name){
-        this.county = county;
+    public Country(County[] counties, String name){
+        this.counties = counties;
         this.name = name;
     }
 
-    public Country (County[] county, int pop){
-        this.county = county;
+    public Country (County[] counties, int pop){
+        this.counties = counties;
         this.pop = pop;
     }
 
-    public County[] getCounty() {
-        return county;
+    public County[] getCounties() {
+        return counties;
     }
 
-    public void setCounty(County[] county) {
-        this.county = county;
+    public void setCounties(County[] counties) {
+        this.counties = counties;
     }
 
     public String getName() {
@@ -52,7 +52,7 @@ public class Country {
     @Override
     public String toString() {
         return "Country{" +
-                "county=" + Arrays.toString(county) +
+                "county=" + Arrays.toString(counties) +
                 ", name='" + name + '\'' +
                 ", pop=" + pop +
                 '}';

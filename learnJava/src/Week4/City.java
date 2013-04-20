@@ -35,6 +35,29 @@ public class City {
         this.name = name;
     }
 
+    public double getBrut() {
+        return brut;
+    }
+
+    public void setBrut(double brut) {
+        this.brut = brut;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
+    public int getSurface() {
+        return surface;
+    }
+
+    public void setSurface(int surface) {
+        this.surface = surface;
+    }
 
     @Override
     public String toString() {

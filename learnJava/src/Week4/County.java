@@ -5,21 +5,19 @@ import java.util.Arrays;
 public class County {
     protected City[] cities;
     protected String tara;
-    protected String oras;
+    protected String name;
 
     public County(){}
 
-    public County(City[] cities, String tara, String oras){
+    public County(City[] cities, String tara, String name){
         this.cities = cities;
         this.tara = tara;
-        this.oras = oras;
+        this.name = name;
     }
 
-
-
-    public County(City[] cities, String oras){
+    public County(City[] cities, String name){
         this.cities = cities;
-        this.oras = oras;
+        this.name = name;
     }
 
     public City[] getCities() {
@@ -38,12 +36,12 @@ public class County {
         this.tara = tara;
     }
 
-    public String getOras() {
-        return oras;
+    public String getName() {
+        return name;
     }
 
-    public void setOras(String oras) {
-        this.oras = oras;
+    public void setName(String oras) {
+        this.name = name;
     }
 
     @Override
@@ -51,7 +49,7 @@ public class County {
         return "County{" +
                 "cities=" + Arrays.toString(cities) +
                 ", tara='" + tara + '\'' +
-                ", oras='" + oras + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
