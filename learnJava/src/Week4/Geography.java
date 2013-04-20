@@ -10,9 +10,9 @@ public class Geography {
         City[] city2 = new City[2];
         City[] city3 = new City[2];
 
-        County cluj = new County (city1,"Ardeal","CLUJ");
-        County dolj = new County (city2,"TaraRomaneasca","DOLJ");
-        County salaj = new County (city3,"Hungary","SALAJ");
+        County cluj = new County (city1,"Ardeal","CLUJ",55);
+        County dolj = new County (city2,"TaraRomaneasca","DOLJ",100);
+        County salaj = new County (city3,"Hungary","SALAJ",120);
         System.out.println(cluj);
 
         City clujNapoca = new City(cluj,"Cluj-Napoca",1.1, 111, 10000);
@@ -32,7 +32,9 @@ public class Geography {
 
         int sum = 0;
         sum = sumPopulation(city1);
-        System.out.println("Orasul" + sum);
+        System.out.println("Orasul " + sum);
+        boolean bool = ruralUrban(cluj);
+        System.out.println("Rural este mai populat decat urban --> " + bool);
 
 //        printCityArray(city1);
 
@@ -47,6 +49,16 @@ public class Geography {
             theSum += cityName[i].population;
         }
         return theSum;
+    }
+
+    private static boolean ruralUrban(County judet){
+        boolean bool= false;
+        int sumUrb = sumPopulation(judet.cities);
+        if (   (judet.getPopulation() - sumUrb) < sumUrb  ){
+            bool = true;
+        }
+        System.out.println();
+        return bool;
     }
 
 
