@@ -101,12 +101,52 @@ public class MainProduct {
         products[8] = fruitSalad;
         products[9] = cheeeseCrackers;
 
+        Food[] foods = new Food[7];
+        foods[0] = greenCucumber;
+        foods[1] = cookie;
+        foods[2] = cremesh;
+        foods[3] = cheesecake;
+        foods[4] = liquerice;
+        foods[5] = fruitSalad;
+        foods[6] = cheeeseCrackers;
+
+        DelicatFoof[] deli = new DelicatFoof[6];
+        deli[0] = cookie;
+        deli[1] = cremesh;
+        deli[2] = cheesecake;
+        deli[3] = liquerice;
+        deli[4] = fruitSalad;
+        deli[5] = cheeeseCrackers;
 
 
+        cheap(products);
 
+        heavy(foods);
 
+        dulce(deli);
+    }
 
+    public static void cheap(Product[] products){
+        for (int i=0; i<products.length; i++){
+            if (products[i].getPrice() > 10){
+                System.out.println("The product" + products[i].getId() + "is cheap ");
+            }
+        }
+    }
 
+    public static void heavy(Food[] foods){
+        for (int i=0; i< foods.length; i++){
+            if (foods[i].getKg() > 3){
+                System.out.println("Produsul " + foods[i].getName() + " is heavy");
+            }
+        }
+    }
 
+    public static void dulce(DelicatFoof[] deli){
+        for (int i=0; i< deli.length; i++){
+            if (deli[i].getAroma().equals("dulce")){
+                System.out.println("Produsul " + deli[i].getName() + " is dulce");
+            }
+        }
     }
 }
