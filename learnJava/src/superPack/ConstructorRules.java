@@ -16,8 +16,15 @@ public class ConstructorRules extends Plant{
         this.color = color;
     }
 
+    public static String ConstructorRules(){                          //regula 4
+        String s = "Rule This is the method with the same name as the class and the constructor!!";
+        return s;
+    }
+
     public static void main (String args[]){
         Plant ConstructorRules = new Plant(1,"codul","culoarea");
         print(ConstructorRules.toString());
+
+        print(ConstructorRules());
     }
 }
