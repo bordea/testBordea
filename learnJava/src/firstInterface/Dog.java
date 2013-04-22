@@ -52,4 +52,5 @@ public class Dog implements Pet,Weight{
     public void theWeight() {
         System.out.println("This pet has a weight");
     }
+
 }
