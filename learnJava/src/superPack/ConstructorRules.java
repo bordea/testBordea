@@ -11,9 +11,7 @@ public class ConstructorRules extends Plant{
     public ConstructorRules(){}                     //regula 2 --> costructorii au ACELASI NUME cu clasa
 
     public ConstructorRules(int id, String cod, String color) {      //regula 3  --> constructorii NU AU RETURN TYPE
-        this.id = id;
-        this.cod = cod;
-        this.color = color;
+        super(id,cod,color);
     }
 
     public static String ConstructorRules(){                          //regula 4
