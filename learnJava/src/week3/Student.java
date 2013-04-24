@@ -1,5 +1,8 @@
 package week3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student extends User{
 
     // this class Student has already defined as instamnce variable id, name, age ....
@@ -12,12 +15,23 @@ public class Student extends User{
 
     private String university;
 
+    ArrayList<Mark> marks = new ArrayList<Mark>();
+
     public Student (int id, String name, int age, int avg, String univ){
         this.id=id;
         this.name=name;
         this.age=age;
         this.averageMark=avg;
         this.university=univ;
+    }
+
+    public Student (int id, String name, int age, int avg, String univ, ArrayList<Mark> marks){
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.averageMark=avg;
+        this.university=univ;
+        this.marks =marks;
     }
 
     public String getUniversity() {

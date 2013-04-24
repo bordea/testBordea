@@ -1,6 +1,6 @@
-package Week4;
+package Week4.withList;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
 
 //id , name and dob
@@ -8,7 +8,7 @@ public class Autor {
     protected int id;
     protected String name;
     protected Date dob;
-    protected Book[] bookArray;
+    protected ArrayList<Book> bookArray;
 
     // the default constructor
     public Autor(){};
@@ -19,17 +19,17 @@ public class Autor {
         this.dob = dob;
     }
 
-    public Autor(int id, String name, Date dob, Book[] array){
+    public Autor(int id, String name, Date dob, ArrayList<Book> array){
         this(id,name,dob);
         this.bookArray =array;
     }
 
     //signature --> public + what type of variable it returns + numele signaturii + cate variabile ia + ce returneaza
-    public Book[] getBookArray() {
+    public ArrayList<Book> getBookArray() {
         return bookArray;
     }
 
-    public void setBookArray(Book[] bookArray) {
+    public void setBookArray(ArrayList<Book> bookArray) {
         this.bookArray = bookArray;
     }
 
