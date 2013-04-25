@@ -53,10 +53,10 @@ public class MainInheritance {
         if (userMarin.age>userDana.age){
         }
 
-        for (int i=0; i<(users.size()-1); i++){
+/*        for (int i=0; i<(users.size()-1); i++){
             if (users
 
             }
-        }
+        }    */
     }
 }
