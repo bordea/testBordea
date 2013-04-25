@@ -17,7 +17,7 @@ public class BibleotecaMain {
         Book cartea2 = new Book(11,"C1",autor1);
         System.out.println(cartea2);
 
-        Book[] bookAr;
+        ArrayList<Book> bookAr;
         bookAr = new ArrayList<Book>();
         bookAr.add(cartea1);
         bookAr.add(cartea2);
@@ -44,10 +44,10 @@ public class BibleotecaMain {
         Book cartea6 = new Book(15,"CarteSase",autor3);
         System.out.println(cartea6);
 
-        Book[] bookAr3;
-        bookAr3 = new Book[2];
-        bookAr3[0] = cartea5;
-        bookAr3[1] = cartea6;
+        ArrayList<Book> bookAr3;
+        bookAr3 = new ArrayList<Book>();
+        bookAr3.add(cartea5);
+        bookAr3.add(cartea6);
 
         ArrayList<Autor> autorArr;
         autorArr = new ArrayList<Autor>();
@@ -68,10 +68,10 @@ public class BibleotecaMain {
 
 //metoda care afiseaza un array de bookuri dat
 
-    private static void printGivenArray(Book[] bookAr){
-        int len = bookAr.length;
+    private static void printGivenArray(ArrayList<Book> bookAr){
+        int len = bookAr.size();
         for (int i=0;i< len; i++){
-            System.out.println("Printing element number" + i + " --> " + bookAr[i]);
+            System.out.println("Printing element number" + i + " --> " + bookAr.get(i));
         }
     }
 

@@ -1,5 +1,7 @@
 package week3;
 
+import java.util.ArrayList;
+
 public class MainInheritance {
 
     public static void main(String[] args){
@@ -16,7 +18,10 @@ public class MainInheritance {
         s = userMarin.ageGroup();
         System.out.println( "is in the " + s + " group");
 
-        User userDana = new User("Dana",21);
+        //User userDana = new User("Dana",21);
+        ArrayList<User> userAr;
+        userAr = new ArrayList<User>();
+        userAr.add("Dana");
         System.out.println(userDana);
         s = userDana.ageGroup();
         System.out.println( "is in the " + s + " group");
