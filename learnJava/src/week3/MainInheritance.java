@@ -50,9 +50,11 @@ public class MainInheritance {
         users.add(userDana);
         users.add(radu);
         users.add(silvia);
+        if (userMarin.age>userDana.age){
+        }
 
-        for (int i=0; i<users.size(); i++){
-            if (users){
+        for (int i=0; i<(users.size()-1); i++){
+            if (users
 
             }
         }
