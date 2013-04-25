@@ -51,5 +51,10 @@ public class MainInheritance {
         users.add(radu);
         users.add(silvia);
 
+        for (int i=0; i<users.size(); i++){
+            if (users){
+
+            }
+        }
     }
 }
