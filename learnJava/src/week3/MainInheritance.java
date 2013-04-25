@@ -18,10 +18,7 @@ public class MainInheritance {
         s = userMarin.ageGroup();
         System.out.println( "is in the " + s + " group");
 
-        //User userDana = new User("Dana",21);
-        ArrayList<User> userAr;
-        userAr = new ArrayList<User>();
-        userAr.add("Dana");
+        User userDana = new User("Dana",21);
         System.out.println(userDana);
         s = userDana.ageGroup();
         System.out.println( "is in the " + s + " group");
@@ -46,5 +43,13 @@ public class MainInheritance {
         System.out.println(silvia.getAge());
         System.out.println(silvia.getCountry());
         System.out.println(silvia.getName() + " is from Romania --> " + silvia.isFromRomania());
+
+        ArrayList<User> users;
+        users = new ArrayList<User>();
+        users.add(userMarin);
+        users.add(userDana);
+        users.add(radu);
+        users.add(silvia);
+
     }
 }
