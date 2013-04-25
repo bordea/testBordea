@@ -16,11 +16,11 @@ public class BankSerice {
 
         NotificationService notificationService2 = new SmsNotificationService();
 
-        notificationService2.sendMessage("message1");
-        notificationService2.sendHighPriorityMessage("message2");
+//        notificationService2.sendMessage("message1");
+//        notificationService2.sendHighPriorityMessage("message2");
         notificationService2.sendAllMessage(messages);
 
         SmsNotificationService smsNotificationService = new SmsNotificationService();
-//        smsNotificationService.
+        smsNotificationService.sendAllMessage(messages);
     }
 }
