@@ -17,20 +17,31 @@ public class Student extends User{
 
     ArrayList<Mark> marks = new ArrayList<Mark>();
 
-    public Student (int id, String name, int age, int avg, String univ){
+ /*   public Student (int id, String name, int age, int avg, String univ){
         this.id=id;
         this.name=name;
         this.age=age;
+        this.averageMark=avg;
+        this.university=univ;
+    } */
+
+    public Student (int id, String name, int age, int avg, String univ){
+        super(id,name,age);
         this.averageMark=avg;
         this.university=univ;
     }
 
-    public Student (int id, String name, int age, int avg, String univ, ArrayList<Mark> marks){
+ /*   public Student (int id, String name, int age, int avg, String univ, ArrayList<Mark> marks){
         this.id=id;
         this.name=name;
         this.age=age;
         this.averageMark=avg;
         this.university=univ;
+        this.marks =marks;
+    }*/
+
+    public Student (int id, String name, int age, int avg, String univ, ArrayList<Mark> marks){
+        this(id,name,age,avg,univ);
         this.marks =marks;
     }
 

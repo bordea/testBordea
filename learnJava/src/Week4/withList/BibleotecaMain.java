@@ -17,7 +17,7 @@ public class BibleotecaMain {
         Book cartea2 = new Book(11,"C1",autor1);
         System.out.println(cartea2);
 
-        ArrayList<Book> bookAr;
+        Book[] bookAr;
         bookAr = new ArrayList<Book>();
         bookAr.add(cartea1);
         bookAr.add(cartea2);
@@ -78,13 +78,13 @@ public class BibleotecaMain {
     private static void printAuthorBooks(Autor autor) {
         System.out.println("in printAuthorBooks ....");
 
-        int len=autor.getBookArray().length;
+        int len=autor.getBookArray().size();
 
-        Book[] arrayBook = autor.getBookArray();
+        ArrayList<Book> arrayBook = autor.getBookArray();
 
         for (int i=0;i<len;i++){
 //            Book currentBook = autor.getBookArray()[i];
-            Book currentBook = arrayBook[i];
+            Book currentBook = arrayBook.get(i);
             System.out.println(currentBook);
         }
         System.out.println("end printAuthorBooks ....");
