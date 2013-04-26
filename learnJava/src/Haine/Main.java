@@ -60,9 +60,9 @@ public class Main {
         hm1.put("Cristi hat ", belfastCap);
         hm1.put("Cristi bluza ", sportT);
         hm1.put("Cristi panataloni ", shortTr);
-        hm1.put("Dana hat ", belfastLadyHat );
-        hm1.put("Dana bluza ", workT);
-        hm1.put("Dana pantaloni ", workTr);
+        hm1.put("Estera hat ", belfastLadyHat );
+        hm1.put("Estera bluza ", workT);
+        hm1.put("Estera pantaloni ", workTr);
         hm1.put("Lista cu palariile/caciulile ", hats);
         hm1.put("Lista cu bluzele  ", tops);
         hm1.put("Lista cu pantaloni ", bots);
@@ -90,6 +90,45 @@ public class Main {
                 print2(tops);
                 break;
             }
+        }
+
+        System.out.println("A doua metoda*********************");
+
+        HashMap hm2 = new HashMap();
+
+        hm2.put("Radu hat ", dublinCap);
+        hm2.put("Radu bluza ", blouseBumbac);
+        hm2.put("Radu panataloni ", longTr);
+        hm2.put("Dana hat ", belfastLadyHat );
+        hm2.put("Dana bluza ", blouseMohair);
+        hm2.put("Dana pantaloni ", churchTr);
+
+        Set set3 = hm2.entrySet();
+
+        Iterator i3 = set3.iterator();
+
+        while(i3.hasNext()) {
+            Map.Entry third = (Map.Entry)i3.next();
+            System.out.println(third.getKey() + " <-- Key + Value --> " + third.getValue());
+        }
+
+        while (i3.hasNext()){
+            Map.Entry second = (Map.Entry)i3.next();
+            if (hm2.containsKey("Radu hat")){
+                hm2.remove("Radu hat");
+                break;
+            }
+        }
+
+        System.out.println("A doua metoda*********************dupa removal");
+
+        Set set4 = hm2.entrySet();
+
+        Iterator i4 = set4.iterator();
+
+        while(i4.hasNext()) {
+            Map.Entry third = (Map.Entry)i4.next();
+            System.out.println(third.getKey() + " <-- Key + Value --> " + third.getValue());
         }
 
 
