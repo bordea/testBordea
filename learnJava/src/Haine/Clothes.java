@@ -24,11 +24,5 @@ public abstract class Clothes {
         this.color = color;
     }
 
-    @Override
-    public String toString() {
-        return "Clothes{" +
-                "size=" + size +
-                ", color='" + color + '\'' +
-                '}';
-    }
+
 }
