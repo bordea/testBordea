@@ -8,6 +8,12 @@ public abstract class Clothes {
 
     char gen;   //Women Men Kids Unisex
 
+    public Clothes(int size,String color,char gen){
+        this.size = size;
+        this.color = color;
+        this.gen = gen;
+    }
+
     public int getSize() {
         return size;
     }
@@ -24,5 +30,11 @@ public abstract class Clothes {
         this.color = color;
     }
 
+    public char getGen() {
+        return gen;
+    }
 
+    public void setGen(char gen) {
+        this.gen = gen;
+    }
 }

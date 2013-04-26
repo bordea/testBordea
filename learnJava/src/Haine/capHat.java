@@ -3,13 +3,11 @@ package Haine;
 public class capHat extends Hats {
     String ocassion;
 
-    public capHat(int size, String color, char gen, boolean washable, String ocassion) {
-        this.size = size;
-        this.color = color;
-        this.gen = gen;
+    public capHat(int size, String color, char gen, boolean washable) {
+        super(size, color, gen, washable);
         this.washable = washable;
-        this. ocassion = ocassion;
     }
+
 
     public String getOcassion() {
         return ocassion;
