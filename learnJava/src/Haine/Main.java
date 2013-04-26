@@ -63,6 +63,9 @@ public class Main {
         hm1.put("Dana hat ", belfastLadyHat );
         hm1.put("Dana bluza ", workT);
         hm1.put("Dana pantaloni ", workTr);
+        hm1.put("Lista cu palariile/caciulile ", hats);
+        hm1.put("Lista cu bluzele  ", tops);
+        hm1.put("Lista cu pantaloni ", bots);
 
         Set set = hm1.entrySet();
 
@@ -71,6 +74,22 @@ public class Main {
         while(i.hasNext()) {
             Map.Entry first = (Map.Entry)i.next();
             System.out.println(first.getKey() + " <-- Key + Value --> " + first.getValue());
+        }
+
+
+        Set set2 = hm1.entrySet();
+
+        Iterator i2 = set2.iterator();
+
+        System.out.println("Cautare");
+
+        while (i2.hasNext()){
+            Map.Entry second = (Map.Entry)i2.next();
+            System.out.println(hm1.keySet());
+            if (hm1.containsValue(tops)){
+                print2(tops);
+                break;
+            }
         }
 
 
