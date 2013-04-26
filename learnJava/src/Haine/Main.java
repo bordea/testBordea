@@ -1,5 +1,6 @@
 package Haine;
 
+import java.util.*;
 import java.util.ArrayList;
 
 public class Main {
@@ -25,8 +26,8 @@ public class Main {
         System.out.println("Bluze");
 
         Clothes sportT = new tShirt(16,"blue", 'W',"long",true,"PEPSI");
-        Clothes workT = new tShirt(10,"red", 'M',"short",false,"PEPSI");
-        Clothes blouseBumbac = new blouse(10,"black", 'U',"long",false,"PEPSI");
+        Clothes workT = new tShirt(10,"red", 'M',"short",false,"COCA-COLA");
+        Clothes blouseBumbac = new blouse(10,"black", 'U',"long",false,"BUMBAC");
         Clothes blouseMohair = new blouse(8,"black", 'M',"long",true,"MOHAIR");
 
         ArrayList<Clothes> tops = new ArrayList<Clothes>();
@@ -38,25 +39,49 @@ public class Main {
 
         System.out.println("Budigai");
 
-        Clothes churchT = new PoshTrousers(16,"blue", 'W',"stofa","biserica");
+        Clothes churchTr = new PoshTrousers(16,"blue", 'W',"stofa","biserica");
         Clothes workTr = new PoshTrousers(10,"red", 'M',"blugi","lucru");
-        Clothes shortT = new SportTrousers(10,"black", 'U',"foitza","scurti");
-        Clothes longT = new SportTrousers(8,"black", 'M',"fash","lungi");
+        Clothes shortTr = new SportTrousers(10,"black", 'U',"foitza","scurti");
+        Clothes longTr = new SportTrousers(8,"black", 'M',"fash","lungi");
 
         ArrayList<Clothes> bots = new ArrayList<Clothes>();
-        bots.add(churchT);
+        bots.add(churchTr);
         bots.add(workTr);
-        bots.add(shortT);
-        bots.add(longT);
+        bots.add(shortTr);
+        bots.add(longTr);
         print2(bots);
 
+        System.out.println(" ");
+        System.out.println(" HashMap");
+        System.out.println(" ");
+
+        HashMap hm1 = new HashMap();
+
+        hm1.put("Cristi hat ", belfastCap);
+        hm1.put("Cristi bluza ", sportT);
+        hm1.put("Cristi panataloni ", shortTr);
+        hm1.put("Dana hat ", belfastLadyHat );
+        hm1.put("Dana bluza ", workT);
+        hm1.put("Dana pantaloni ", workTr);
+
+        Set set = hm1.entrySet();
+
+        Iterator i = set.iterator();
+
+        while(i.hasNext()) {
+            Map.Entry first = (Map.Entry)i.next();
+            System.out.println(first.getKey() + " <-- Key + Value --> " + first.getValue());
+        }
 
 
     }
+
+
+
+
     public static void print1(Clothes c){
         System.out.println(c);
     }
-
 
     public static void print2(ArrayList<Clothes> list){
         System.out.println("Afisare lista ");
