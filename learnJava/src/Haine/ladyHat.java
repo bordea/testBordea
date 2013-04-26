@@ -12,10 +12,7 @@ public class ladyHat extends Hats{
     }
 
     public ladyHat(int size, String color, char gen, boolean washable, int age) {
-        this.size = size;
-        this.color = color;
-        this.gen = gen;
-        this.washable = washable;
+        super(size,color,gen,washable);
         this.age = age;
     }
 

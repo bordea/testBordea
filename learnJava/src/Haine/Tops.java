@@ -5,9 +5,10 @@ public abstract class Tops extends Clothes{
 
     boolean vNeck;
 
-    public Tops(int size, String color, char gen,String sleeveSize) {
+    public Tops(int size, String color, char gen,String sleeveSize, boolean vNeck) {
         super(size, color, gen);
         this.sleeveSize = sleeveSize;
+        this. vNeck = vNeck;
     }
 
 

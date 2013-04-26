@@ -3,8 +3,9 @@ package Haine;
 public class tShirt extends Tops {
     String logo;
 
-    public tShirt(int size, String color, char gen, String sleeveSize) {
-        super(size, color, gen, sleeveSize);
+    public tShirt(int size, String color, char gen, String sleeveSize, boolean vNeck, String logo) {
+        super(size, color, gen, sleeveSize, vNeck );
+        this.logo = logo;
     }
 
     public String getLogo() {

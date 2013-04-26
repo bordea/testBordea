@@ -3,9 +3,9 @@ package Haine;
 public class capHat extends Hats {
     String ocassion;
 
-    public capHat(int size, String color, char gen, boolean washable) {
+    public capHat(int size, String color, char gen, boolean washable, String ocassion) {
         super(size, color, gen, washable);
-        this.washable = washable;
+        this.ocassion = ocassion;
     }
 
 

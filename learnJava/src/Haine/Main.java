@@ -20,8 +20,21 @@ public class Main {
         hats.add(belfastLadyHat);
         hats.add(dublinCap);
         hats.add(dublinLadyHat);
-
         print2(hats);
+
+        Clothes sportT = new tShirt(16,"blue", 'W',"long",true,"PEPSI");
+        Clothes workT = new tShirt(10,"red", 'M',"short",false,"PEPSI");
+        Clothes blouseBumbac = new blouse(10,"black", 'U',"long",false,"PEPSI");
+        Clothes blouseMohair = new blouse(8,"black", 'M',"long",true,"MOHAIR");
+
+        ArrayList<Clothes> tops = new ArrayList<Clothes>();
+        hats.add(sportT);
+        hats.add(workT);
+        hats.add(blouseBumbac);
+        hats.add(blouseMohair);
+        print2(tops);
+
+
 
 
 
