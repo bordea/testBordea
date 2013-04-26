@@ -22,19 +22,33 @@ public class Main {
         hats.add(dublinLadyHat);
         print2(hats);
 
+        System.out.println("Bluze");
+
         Clothes sportT = new tShirt(16,"blue", 'W',"long",true,"PEPSI");
         Clothes workT = new tShirt(10,"red", 'M',"short",false,"PEPSI");
         Clothes blouseBumbac = new blouse(10,"black", 'U',"long",false,"PEPSI");
         Clothes blouseMohair = new blouse(8,"black", 'M',"long",true,"MOHAIR");
 
         ArrayList<Clothes> tops = new ArrayList<Clothes>();
-        hats.add(sportT);
-        hats.add(workT);
-        hats.add(blouseBumbac);
-        hats.add(blouseMohair);
+        tops.add(sportT);
+        tops.add(workT);
+        tops.add(blouseBumbac);
+        tops.add(blouseMohair);
         print2(tops);
 
+        System.out.println("Budigai");
 
+        Clothes churchT = new PoshTrousers(16,"blue", 'W',"stofa","biserica");
+        Clothes workTr = new PoshTrousers(10,"red", 'M',"blugi","lucru");
+        Clothes shortT = new SportTrousers(10,"black", 'U',"foitza","scurti");
+        Clothes longT = new SportTrousers(8,"black", 'M',"fash","lungi");
+
+        ArrayList<Clothes> bots = new ArrayList<Clothes>();
+        bots.add(churchT);
+        bots.add(workTr);
+        bots.add(shortT);
+        bots.add(longT);
+        print2(bots);
 
 
 

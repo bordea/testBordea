@@ -22,7 +22,8 @@ public class tShirt extends Tops {
                 "size= " + size +
                 ", color='" + color + '\'' +
                 ", gen= " + gen +
-                ", = " + sleeveSize +
+                ", sleeve size= " + sleeveSize +
+                ", vneck= " + vNeck +
                 ", logo= " + logo +
                 '}';
     }
