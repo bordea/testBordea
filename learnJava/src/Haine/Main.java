@@ -76,20 +76,30 @@ public class Main {
             System.out.println(first.getKey() + " <-- Key + Value --> " + first.getValue());
         }
 
+        System.out.println("Printing the HashMap - Different way");
+
+        Iterator<String> j = hm1.keySet().iterator();
+        String k;
+        while (i.hasNext()){
+            k = j.next();
+            System.out.println("Key: "+ k + " Value: "+hm1.get(k));
+        }
+
         Set<String> KSet = hm1.keySet();                                                              //Print the KeySet
         for (String s:KSet) {
             System.out.println("("+s+")");
         }
 
-        ArrayList<Clothes> VSet = new ArrayList<Clothes>(hm1.values());                     //Print the Value collection
-        for (Clothes haine: VSet) {
-            System.out.println("("+haine+")");
-        }
+//        ArrayList<Clothes> VSet = new ArrayList<Clothes>(hm1.values());                     //Print the Value collection
+//        for (Clothes haine: VSet) {
+//            System.out.println("("+haine+")");
+//        }
 
         System.out.println("Cautare valoare dupa cheie ");
 
         String key1 = "Cristi hat";
         System.out.println(hm1.get(key1));
+
 
         Set set2 = hm1.entrySet();
 
