@@ -57,15 +57,15 @@ public class Main {
 
         HashMap hm1 = new HashMap();
 
-        hm1.put("Cristi hat ", belfastCap);
-        hm1.put("Cristi bluza ", sportT);
-        hm1.put("Cristi panataloni ", shortTr);
-        hm1.put("Estera hat ", belfastLadyHat );
-        hm1.put("Estera bluza ", workT);
-        hm1.put("Estera pantaloni ", workTr);
-        hm1.put("Lista cu palariile/caciulile ", hats);
-        hm1.put("Lista cu bluzele  ", tops);
-        hm1.put("Lista cu pantaloni ", bots);
+        hm1.put("Cristi hat", belfastCap);
+        hm1.put("Cristi bluza", sportT);
+        hm1.put("Cristi panataloni", shortTr);
+        hm1.put("Estera hat", belfastLadyHat );
+        hm1.put("Estera bluza", workT);
+        hm1.put("Estera pantaloni", workTr);
+        hm1.put("Lista cu palariile/caciulile", hats);
+        hm1.put("Lista cu bluzele", tops);
+        hm1.put("Lista cu pantaloni", bots);
 
         Set set = hm1.entrySet();
 
@@ -76,6 +76,20 @@ public class Main {
             System.out.println(first.getKey() + " <-- Key + Value --> " + first.getValue());
         }
 
+        Set<String> KSet = hm1.keySet();                                                              //Print the KeySet
+        for (String s:KSet) {
+            System.out.println("("+s+")");
+        }
+
+        ArrayList<Clothes> VSet = new ArrayList<Clothes>(hm1.values());                     //Print the Value collection
+        for (Clothes haine: VSet) {
+            System.out.println("("+haine+")");
+        }
+
+        System.out.println("Cautare valoare dupa cheie ");
+
+        String key1 = "Cristi hat";
+        System.out.println(hm1.get(key1));
 
         Set set2 = hm1.entrySet();
 
