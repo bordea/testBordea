@@ -6,7 +6,6 @@ public class NewMap {
 
 
     public static void main(String args[]){
-        HashMap<String, Integer> cache = new HashMap<String, Integer>();
 
         Hashtable<Integer, String> source = new Hashtable<Integer,String>();
         HashMap<Integer, String>  map = new HashMap(source);
@@ -49,10 +48,6 @@ public class NewMap {
         System.out.println("Unsorted HashMap: " + map);                              //     This
         TreeMap sortedHashMap = new TreeMap(map);                                    //     sorts
         System.out.println("Sorted HashMap: " + sortedHashMap);                      //     a HahMap
-
-
-
-
 
     }
 }
