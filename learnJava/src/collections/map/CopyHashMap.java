@@ -18,7 +18,7 @@ public class CopyHashMap{
         subhasm.put("The third ", 22);
         subhasm.put("The forth ", 22);
         hashm.putAll(subhasm);
-        System.out.println("HashMap after copy before the sort" + hashm);
+        System.out.println("HashMap after copy before the sort " + hashm);
 
         TreeMap sortedHashm = new TreeMap(hashm);
         System.out.println("HahMap after the sort" + sortedHashm);
