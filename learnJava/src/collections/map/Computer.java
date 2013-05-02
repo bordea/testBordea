@@ -28,12 +28,4 @@ public abstract class Computer {
     public void setName(String name) {
         this.name = name;
     }
-
- /*   @Override
-    public String toString() {
-        return "Computer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }                           */
 }

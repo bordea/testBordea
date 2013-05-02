@@ -20,5 +20,23 @@ public class MainComputer {
             System.out.println(keyb);
             keyb.isEuropean(keyb);
         }
+
+        Mouse m1 = new Mouse(444,"Intel Mouse with 3 buttons",2);
+        Mouse m2 = new Mouse(401,"IBM Mouse with 3 buttons",2);
+        Mouse m3 = new Mouse(493,"Intel Mouse with 2 buttons",0);
+        Mouse m4 = new Mouse(426,"Intel Mouse with 2 buttons",0);
+        Mouse m5 = new Mouse(456,"Intel Mouse with 3 buttons",2);
+        ArrayList<Mouse> m = new ArrayList<Mouse>();
+        m.add(m1);
+        m.add(m2);
+        m.add(m3);
+        m.add(m4);
+        m.add(m5);
+        for (int i=0;i< m.size();i++){
+            Mouse mou = m.get(i);
+            System.out.println(mou);
+            mou.isWireless(mou);
+        }
+
     }
 }
