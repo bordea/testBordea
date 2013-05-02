@@ -10,6 +10,11 @@ public class Keyboard extends Computer{
         this.make = make;
     }
 
+    public void isEuropean(Keyboard k){
+        if (k.layout.equals("European")){
+            System.out.println("You can type with european characters!");
+        }
+    }
 
     public String getLayout() {
         return layout;

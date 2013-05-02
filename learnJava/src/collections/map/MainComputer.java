@@ -18,6 +18,7 @@ public class MainComputer {
         for (int i=0;i< k.size();i++){
             Keyboard keyb = k.get(i);
             System.out.println(keyb);
+            keyb.isEuropean(keyb);
         }
     }
 }
