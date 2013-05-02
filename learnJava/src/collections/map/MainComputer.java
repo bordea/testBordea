@@ -38,5 +38,7 @@ public class MainComputer {
             mou.isWireless(mou);
         }
 
+        Monitor mon1 = new Monitor(0102,"Monitor IBM cu ecran plat",);
+
     }
 }
