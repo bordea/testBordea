@@ -4,6 +4,12 @@ public class Keyboard extends Computer{
     String layout;
     String make;
 
+    public Keyboard(int i, String s, String layout, String make) {
+        super(i,s);
+        this.layout = layout;
+        this.make = make;
+    }
+
 
     public String getLayout() {
         return layout;
@@ -26,7 +32,8 @@ public class Keyboard extends Computer{
         return "Computer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", layout=" + layout
+                ", layout=" + layout +
+                ", make=" + make +
                 '}';
     }
 }
