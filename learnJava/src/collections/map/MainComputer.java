@@ -38,7 +38,23 @@ public class MainComputer {
             mou.isWireless(mou);
         }
 
-        Monitor mon1 = new Monitor(0102,"Monitor IBM cu ecran plat",);
+        Monitor mon1 = new Monitor(102,"Monitor IBM cu ecran vechi",17,2.5);
+        Monitor mon2 = new Monitor(602,"Monitor Toshiba cu ecran plat",19,0.9);
+        Monitor mon3 = new Monitor(305,"Monitor IBM cu ecran plat",17,2.5);
+        Monitor mon4 = new Monitor(609,"Monitor Dell cu ecran plat",17,2.2);
+        Monitor mon5 = new Monitor(105,"Monitor HP cu ecran plat",21,1.1);
+        ArrayList<Monitor> mon = new ArrayList<Monitor>();
+        mon.add(mon1);
+        mon.add(mon2);
+        mon.add(mon3);
+        mon.add(mon4);
+        mon.add(mon5);
+        for (int i=0;i< mon.size();i++){
+            Monitor monitor = mon.get(i);
+            System.out.println(monitor);
+            monitor.isFlat(monitor);
+        }
+
 
     }
 }
