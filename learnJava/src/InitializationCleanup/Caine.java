@@ -11,8 +11,8 @@ public class Caine {
     }
     public static void main(){
         Caine dog = new Caine();
-        dog.bark("String");
+     /*   dog.bark("String");
         dog.bark(3);
-        dog.bark(5.5);
+        dog.bark(5.5);     */
     }
 }
