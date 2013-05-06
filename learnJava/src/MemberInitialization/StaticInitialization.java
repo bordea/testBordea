@@ -20,8 +20,8 @@ class Table {
     static Bowl bowl2 = new Bowl(2);
 }
 class Cupboard {
-    Bowl bowl3 = new Bowl(3);
-    static Bowl bowl4 = new Bowl(4);
+    Bowl bowl3 = new Bowl(3);                                             // non-static
+    static Bowl bowl4 = new Bowl(4);                                      // static definition
     Cupboard() {
         System.out.println("Cupboard()");
         bowl4.f1(2);
