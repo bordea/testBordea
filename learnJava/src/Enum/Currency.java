@@ -40,5 +40,9 @@ public class Currency {
         Currency german = new Currency(CurrencyType.Marca);
         Currency romanian = new Currency(CurrencyType.Leu);
         Currency russian = new Currency(CurrencyType.Rubla);
+
+        for(CurrencyType c : CurrencyType.values()){
+            System.out.println(c + " is number " + (c.ordinal()+1) + "in the currency list");
+        }
     }
 }
