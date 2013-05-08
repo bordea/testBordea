@@ -28,21 +28,21 @@ public class Currency {
                 break;
             case Rubla: System.out.println("Rubla is the least valuable");
                 break;
-            default: System.out.println("TRy another currency from the enum!!!");
+            default: System.out.println("Try another currency from the enum!!!");
                 break;
         }
     }
 
     public static void main(String[] args) {
-        Currency british = new Currency(CurrencyType.Pound);
+      /*  Currency british = new Currency(CurrencyType.Pound);
         Currency european = new Currency(CurrencyType.Euro);
         Currency american = new Currency(CurrencyType.Dollar);
         Currency german = new Currency(CurrencyType.Marca);
         Currency romanian = new Currency(CurrencyType.Leu);
-        Currency russian = new Currency(CurrencyType.Rubla);
+        Currency russian = new Currency(CurrencyType.Rubla);    */
 
         for(CurrencyType c : CurrencyType.values()){
-            System.out.println(c + " is number " + (c.ordinal()+1) + "in the currency list");
+            System.out.println(c + " is number " + (c.ordinal()+1) + "  in the currency list");
         }
     }
 }
