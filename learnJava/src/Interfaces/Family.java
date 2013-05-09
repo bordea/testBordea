@@ -21,7 +21,7 @@ interface skills extends actiune,invata,mananca{
     void conduce();
 }
 
-class YoungPerson implements invata,mananca{
+abstract class YoungPerson implements invata,mananca{
     public void citeste() {
         System.out.println("Persoana invata citind");
     }
