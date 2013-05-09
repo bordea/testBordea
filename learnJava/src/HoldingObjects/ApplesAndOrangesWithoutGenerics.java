@@ -13,6 +13,7 @@ public class ApplesAndOrangesWithoutGenerics {
         ArrayList apples = new ArrayList();
         for(int i = 0; i < 3; i++)
             apples.add(new Apple());
+
         apples.add(new Orange());                       // nimic nu ne impiedica sa adaugam orange la apple
         for(int i = 0; i < apples.size(); i++){
             ((Apple)apples.get(i)).id();                // eroarea e detectata doar la run time
