@@ -21,11 +21,22 @@ interface skills extends actiune,invata,mananca{
     void conduce();
 }
 
-class Person implements skills{
-
+class YoungPerson implements invata,mananca{
+    public void citeste() {
+        System.out.println("Persoana invata citind");
+    }
+    public void scrie() {
+        System.out.println("Persoana invata scriind");
+    }
+    public void supa() {
+        System.out.println("Persoana mananca supa");
+    }
+    public void desert() {
+        System.out.println("Persoana mananca desert");
+    }
 }
 
-class Student extends Person implements skills{
+class Student extends YoungPerson implements skills{
     public void conduce() {
         System.out.println("Persoana poate conduce");
     }
@@ -50,8 +61,16 @@ class Student extends Person implements skills{
 }
 
 public class Family {
+    static void method1(actiune a){a.doarme();a.lucreaza();};
+    static void method2(invata i){i.citeste();i.scrie();};
+    static void method3(mananca m){m.desert();m.supa();};
+    static void method4(skills s){s.conduce();};
 
     public static void main(String[] args){
-
+        Student radu = new Student();
+        method1(radu);
+        method2(radu);
+        method3(radu);
+        method4(radu);
     }
 }
