@@ -21,9 +21,9 @@ public class Teorie {
     Cele doua motive pentru a folosi metode finale sunt:
             1. Sa blocam posibilitatea ca orice inheriting class sa schimbe 'meaning'-ul ei
             2. Pentru eficienta.
-
     Metodele private dintr-o clasa sunt implicit finale. Deoarece nu putem accesa o metoda privata, nu putem nici sa rescriem(override).
      Prin adaugarea FINAL la o metoda PRIVATE nu shimbam cu nimic meaning-ul ei.
+    Metodele finale nu pot fi rescrise de subclase.
 
     Cand spunem ca toata clasa este finala spunem ca nu dorim sa inherit de la aceasta clasa si nu dorim sa dam voie nimanui sa
      inherit. Deci clasa aceasta nu va avea niciodata vreo schimbare. Se poate sa nu vrem acest lucru din motive de securitate.
