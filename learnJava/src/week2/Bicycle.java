@@ -1,11 +1,11 @@
 package week2;
 
 public class Bicycle {
-    public int cadence;
+    protected int cadence;
     public int gear;
     public int speed;
 
-    public Bicycle(int startCadence, int startSpeed, int startGear) {
+    protected Bicycle(int startCadence, int startSpeed, int startGear) {       // private nu permite accesul sublaselor
         gear = startGear;
         cadence = startCadence;
         speed = startSpeed;

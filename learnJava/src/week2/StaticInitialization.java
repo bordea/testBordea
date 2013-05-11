@@ -4,12 +4,12 @@ class Bowl {
     Bowl(int marker) {
         System.out.println("Bowl(" + marker + ")");
     }
-    void f1(int marker) {
+     void f1(int marker) {                                // simpla privatizare a lui f1 breaks the whole program
         System.out.println("f1(" + marker + ")");
     }
 }
 class Table {
-    static Bowl bowl1 = new Bowl(1);
+    protected static Bowl bowl1 = new Bowl(1);          // public e subinteles si in cazul de fata protected permite acelasi acces necesar
     Table() {
         System.out.println("Table()");
         bowl2.f1(1);
