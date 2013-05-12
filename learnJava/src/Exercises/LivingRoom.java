@@ -4,7 +4,7 @@ import java.util.*;
 
 public class LivingRoom extends Apartment{
 
-    protected Map<String, Integer> dimensions = new HashMap<String, Integer>();   // daca facem Map final nu putem construi constructorul
+    protected Map<Enum, Integer> dimensions = new HashMap<Enum, Integer>();   // daca facem Map final nu putem construi constructorul
 
     protected String floorType;
 
@@ -22,28 +22,28 @@ public class LivingRoom extends Apartment{
         this.floorType = floorType;
     }
 
-    public LivingRoom(Map<String, Integer> dimensions){
+    public LivingRoom(Map<Enum, Integer> dimensions){
         this.dimensions = dimensions;
     }
 
-    public LivingRoom(int temperature, int numberOfRadiators, Map<String, Integer> dimensions, String floorType) {
+    public LivingRoom(int temperature, int numberOfRadiators, Map<Enum, Integer> dimensions, String floorType) {
         super(temperature, numberOfRadiators);
         this.dimensions = dimensions;
         this.floorType = floorType;
     }
 
-    public LivingRoom(int temperature, int numberOfRadiators, Map<String, Integer> dimensions) {
+    public LivingRoom(int temperature, int numberOfRadiators, Map<Enum, Integer> dimensions) {
         super(temperature, numberOfRadiators);
         this.dimensions = dimensions;
     }
 
 
-    public LivingRoom(Map<String, Integer> dimensions, String floorType) {
+    public LivingRoom(Map<Enum, Integer> dimensions, String floorType) {
         this.dimensions = dimensions;
         this.floorType = floorType;
     }
 
-    public Map<String, Integer> getDimensions() {
+    public Map<Enum, Integer> getDimensions() {
         return dimensions;
     }
 
@@ -51,7 +51,7 @@ public class LivingRoom extends Apartment{
         return floorType;
     }
 
-    public void setDimensions(Map<String, Integer> dimensions) {
+    public void setDimensions(Map<Enum, Integer> dimensions) {
         this.dimensions = dimensions;
     }
 

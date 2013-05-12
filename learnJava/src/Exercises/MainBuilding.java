@@ -1,5 +1,7 @@
 package Exercises;
 
+import java.util.*;
+
 public class MainBuilding {
     public enum Dimensiuni{
         LUNGIME, LATIME, INALTIME
@@ -8,8 +10,15 @@ public class MainBuilding {
     //public Dimensiuni(Dimensiuni dim){this.dim= dim;}
 
     public static void main (String [] args) {
-
-        LivingRoom raduLivingRoom = new LivingRoom(20,2,"carpet");
+        ArrayList<Integer> theDimensionsForRadu = new ArrayList<Integer>();
+        theDimensionsForRadu.add(3);
+        theDimensionsForRadu.add(2);
+        theDimensionsForRadu.add(5);
+        Map<Enum,Integer> dimensionsRaduLiving = new HashMap<Enum,Integer>();
+        dimensionsRaduLiving.put(Dimensiuni.LUNGIME,theDimensionsForRadu.get(1));
+        dimensionsRaduLiving.put(Dimensiuni.LATIME,theDimensionsForRadu.get(2));
+        dimensionsRaduLiving.put(Dimensiuni.INALTIME,theDimensionsForRadu.get(3));
+        LivingRoom raduLivingRoom = new LivingRoom(20,2,dimensionsRaduLiving,"carpet");
         LivingRoom danaLivingRoom = new LivingRoom(22,1,"wood");
         LivingRoom mamaLivingRoom = new LivingRoom(20,2,"linoleu");
         LivingRoom tataLivingRoom = new LivingRoom(16,3,"linoleu");
