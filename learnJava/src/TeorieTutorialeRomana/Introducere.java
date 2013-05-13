@@ -32,3 +32,20 @@ The variables can be of 4 types depending on where they're declared
 3. Methods parameters --> they're visible only inside that method
 4. Exception handling parameters
 */
+
+/*
+Arrays
+1. Delcaring an array
+Type [] arrayName;  --> int[] firstOneHundredNumbers
+Type arrayName [];  --> String [] numeElevi
+2. Instantation --> it's realised through the operator new and it physically allocates the memory for the array.(max no of elements)
+arrayName = new Type[Size]
+3. Initialization --> optional
+Multidimensional Arrays
+Type arrayName []
+
+length --> keyword that returns the length of the array
+
+System.arraycopy(x,0,y,0,x.length) --> used for copying arrays
+
+*/
