@@ -49,3 +49,9 @@ length --> keyword that returns the length of the array
 System.arraycopy(x,0,y,0,x.length) --> used for copying arrays
 
 */
+
+/*
+String --> is an array of chars
+Declaring a String can be done in different ways but most common is String s = "string content"
+The concatenation is done using the + operator
+*/
