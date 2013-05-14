@@ -100,6 +100,58 @@ Overloading --> inside a class we could have methods with the same name with the
 Overriding --> a subclass of a class can rewrite, overrired the method of the superclass by implementing a method with the same name
                 and the same signature as the superclass
 
+An overriding method can - ignore the superclasses's method
+                         - extend the code of the superclasses's method before doing its own functions
+                                This can be done by using super --> super.method();
+
+A final method is a method that can't ever be defined again in any subclass it might have. This is usefull if this method has an
+implementation which we want to make sure that won;t be changed, most likely being very important for characterizing an object.
+ */
+
+/*
+Nested classes
+Nested classes, the use of a class inside of another class, is usefull when the nested class ain't used anywhere else outside
+the super class
+A nested class has access to all its superclass methods.
+
+The nested classes can be declared static or not. If we don't declare a nested class static then we can call it an internal class.
+The diference between these two is
+ - the nested class reflects the syntactic relation between the classes, one code is inside the other's code
+ - the internal class reflects the instances relation of two classes, so that the an instance of the internal class can only exist
+    inside the superclass
+Most nested classes will be the non-static ones --> the internal classes.
+
+SO AN INTERNAL CLASS IS A CLASS WHOSE INSTANCES CAN ONLY EXIST INSIDE THE INSTANCES OF THE SUPERCLASS AND IT HAS DIRECT
+ACCESS TO ALL THE SUPERCLASS MEMBERS.
+
+When compiled, the interal classes produce files that have the $ sign following the name of the superclass.
+ */
+/*
+Abstract classes
+An abstract method is a method that cannot ever be instantiated and its use is for another class to make an object concrete.
+abstract class abstractClassName{
+    class body
+}
+Should we try and instantiate an object of an abstract class we'll get a compilation error.
+
+Abstract methods
+Abstract methods can ONLY appear in abstract classes. The abstract method has no implementation.
+ */
+
+/*
+The Object Class
+Every class has a superclass. The mother of all classes is the class Object.
+
+Class nameClass()  =   Class nameClass() extends Object
+
+This class defines the behaviour of all Java classes
+ - the comparison of objects
+ - the posibility of having arrays of objects
+ - returning the class of an object
+ - notifying other objects that a variable has changed
+
+Being a subclass of the Object class, any clas can, in theory, override the methods of the Object Class which aren't final.
+(they are equals/hashcode , finaliza, toString)
  */
 
 

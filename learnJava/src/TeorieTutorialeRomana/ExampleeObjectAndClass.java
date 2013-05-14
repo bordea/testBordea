@@ -30,7 +30,7 @@ class Town{
             System.out.println(t.name + " este doar un TOWN pentru ca populatia sa este de doar " + t.populationInThousands * 1000);
         }
     }
-    public ArrayList<Town> isVillage(ArrayList<Town> a){
+    final public ArrayList<Town> isVillage(ArrayList<Town> a){
         ArrayList<Town> array1 = new ArrayList<Town>();
         ArrayList<Town> array2 = new ArrayList<Town>();
         for (Town t : a){
