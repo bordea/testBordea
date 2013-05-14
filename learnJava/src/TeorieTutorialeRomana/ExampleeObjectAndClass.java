@@ -30,7 +30,10 @@ class Town{
             System.out.println(t.name + " este doar un TOWN pentru ca populatia sa este de doar " + t.populationInThousands * 1000);
         }
     }
-
+    protected void finalize()throws Throwable{
+        name = null;
+        super.finalize();
+    }
 }
 
 public class ExampleeObjectAndClass {
@@ -59,4 +62,5 @@ public class ExampleeObjectAndClass {
             t.isCity(t);
         }
     }
+
 }
