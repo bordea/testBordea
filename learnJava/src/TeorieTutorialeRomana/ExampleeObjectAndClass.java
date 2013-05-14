@@ -30,6 +30,16 @@ class Town{
             System.out.println(t.name + " este doar un TOWN pentru ca populatia sa este de doar " + t.populationInThousands * 1000);
         }
     }
+    public ArrayList<Town> isVillage(ArrayList<Town> a){
+        ArrayList<Town> array = new ArrayList<Town>();
+        for (Town t : a){
+            if (t.populationInThousands<1000){
+                array.add(t);
+            }
+        }
+        return array;
+    }
+
     protected void finalize()throws Throwable{
         name = null;
         super.finalize();
@@ -61,6 +71,10 @@ public class ExampleeObjectAndClass {
         for (Town t : places){
             t.isCity(t);
         }
+
+        ArrayList<Town> villages = new ArrayList<Town>();
+
+        villages =
     }
 
 }

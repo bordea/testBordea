@@ -61,7 +61,36 @@ private --> No other class can instantiate this classes's objects. This kind of 
 protected --> Just its subclasses can create object of the classes's type
 public --> Any class can instantiate this class
 default --> Just the same package classes can instantiate this class
+*/
+/*
+Member variables declaration
+The standard is that the variables are declared before the methods. Not inside the methods but inside the class. The variables
+declared inside a method will be local to that method.
+When declaring a variable we ought to specify the following
+ - its name
+ - data Type
+ - the level of access to it by other classes
+ - if it's constant or not
+ - if it's an instance variable or a class
 
+[modifier] DataType variableName [ = InitialValue ] ;
+
+The modifier for variables can be - an access specifier, such as public, protected or private
+                                  - one of the rezerved words(keywords), such as static, final, transient and volatile
+
+Implementing methods
+Methods describe the behaviour of an object
+[modifiers] returnedType methodType ( [arguments] )
+		[throws ExceptionType]
+	{
+		// method body
+	}
+the modifier can be - of access --> public, protected or private
+                    - one of the ezerved words --> static, abstract, final, native, synchronized
+
+Methods can either return an object value or nothing, depending on the declaration. The returned type could bve a primitive
+data type or a reference to a class object. If the method doesn't return an object we must ensure that the keyword void is being used.
+If we want to return something we must have the return instructions on every possible ending of the method.
 
 
 */
