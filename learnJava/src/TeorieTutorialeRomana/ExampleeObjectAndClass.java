@@ -67,6 +67,49 @@ class Town{
     }
 }
 
+class Neighbourhood extends Town{
+    protected String neighbourhoodName;
+    public int numberOfStreets;
+    public int tallestbuilding;
+
+    Neighbourhood() {
+    }
+
+    Neighbourhood(String name, int populationInThousands, String neighbourhoodName, int numberOfStreets, int tallestbuilding) {
+        super(name,populationInThousands);
+        this.neighbourhoodName = neighbourhoodName;
+        this.numberOfStreets = numberOfStreets;
+        this.tallestbuilding = tallestbuilding;
+    }
+
+    public String isBig(Neighbourhood n){
+        if (n.numberOfStreets>200){
+            return "Da, deoarece are " + n.numberOfStreets + " strazi";
+        }
+        else {
+            return "Nu, deoarece are doar " + n.numberOfStreets + " strazi";
+        }
+    }
+
+    public boolean isBig(int i){
+        if (i>50){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Neighbourhood{" +
+                "neighbourhoodName='" + neighbourhoodName + '\'' +
+                ", numberOfStreets=" + numberOfStreets +
+                ", tallestbuilding=" + tallestbuilding +
+                '}';
+    }
+}
+
 public class ExampleeObjectAndClass {
     public static void main(String[] args){
         Town belfast = new Town("Belfast",200);
@@ -106,6 +149,29 @@ public class ExampleeObjectAndClass {
             System.out.println(" este mare? " + t.isBig(t));
         }
 
+        Neighbourhood manastur = new Neighbourhood("Cluj-Napoca",287, "Manastur", 175, 44);
+        Neighbourhood damb = new Neighbourhood("Cluj-Napoca", 287, "Dambu Rotund", 250, 22);
+        Neighbourhood centru = new Neighbourhood("Cluj-Napoca", 287, "Centru", 240, 77);
+        Neighbourhood marasti = new Neighbourhood("Cluj-Napoca", 287, "Marasti", 150, 44);
+        Neighbourhood floresti = new Neighbourhood("Cluj-Napoca", 287, "Floresti", 275, 54);
+
+        ArrayList<Neighbourhood> cartiere = new ArrayList<Neighbourhood>();
+        cartiere.add(manastur);
+        cartiere.add(damb);
+        cartiere.add(centru);
+        cartiere.add(marasti);
+        cartiere.add(floresti);
+
+        for (Neighbourhood n : cartiere){
+            System.out.print(n);
+            System.out.println(" este mare? " + n.isBig(n));   // argumentul este de tip neighbourhood si returneaza String
+        }
+
+
+        for (Neighbourhood n : cartiere){
+            System.out.print(n);                                     // argumentul este de tip int si returneaza boolean
+            System.out.println(" are o cladire mai mare de 50 de metri? " + n.isBig(n.tallestbuilding));
+        }
 
     }
 
