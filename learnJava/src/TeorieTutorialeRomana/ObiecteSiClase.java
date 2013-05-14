@@ -91,10 +91,16 @@ the modifier can be - of access --> public, protected or private
 Methods can either return an object value or nothing, depending on the declaration. The returned type could bve a primitive
 data type or a reference to a class object. If the method doesn't return an object we must ensure that the keyword void is being used.
 If we want to return something we must have the return instructions on every possible ending of the method.
-
-
 */
+/*
+Method overloading and overriding
+Overloading --> inside a class we could have methods with the same name with the condition that their signature should be different.
+                The arguments list should differ either by the number of arguments or by their type. This way when the method is called
+                it can be establish which unique method will be executed. This is also called polimorphism
+Overriding --> a subclass of a class can rewrite, overrired the method of the superclass by implementing a method with the same name
+                and the same signature as the superclass
 
+ */
 
 
 

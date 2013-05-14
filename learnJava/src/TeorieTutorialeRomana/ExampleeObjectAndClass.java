@@ -31,18 +31,39 @@ class Town{
         }
     }
     public ArrayList<Town> isVillage(ArrayList<Town> a){
-        ArrayList<Town> array = new ArrayList<Town>();
+        ArrayList<Town> array1 = new ArrayList<Town>();
+        ArrayList<Town> array2 = new ArrayList<Town>();
         for (Town t : a){
             if (t.populationInThousands<1000){
-                array.add(t);
+                array1.add(t);
+            }
+            else {
+                array2.add(t);
             }
         }
-        return array;
+        return array1;
+    }
+
+    public String isBig(Town t){
+        if (t.populationInThousands>500){
+            return "Da";
+        }
+        else {
+            return "Nu";
+        }
     }
 
     protected void finalize()throws Throwable{
         name = null;
         super.finalize();
+    }
+
+    @Override
+    public String toString() {
+        return "Town{" +
+                "name='" + name + '\'' +
+                ", populationInThousands=" + populationInThousands +
+                '}';
     }
 }
 
@@ -74,7 +95,18 @@ public class ExampleeObjectAndClass {
 
         ArrayList<Town> villages = new ArrayList<Town>();
 
-        villages =
+        villages = belfast.isVillage(places);
+        System.out.println("The villages are the following");
+        for (Town t : villages){
+            System.out.println(t);
+        }
+
+        for (Town t : places){
+            System.out.print(t);
+            System.out.println(" este mare? " + t.isBig(t));
+        }
+
+
     }
 
 }
