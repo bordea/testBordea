@@ -30,7 +30,16 @@ class Book implements Document{
     }
 
     public void read() {
-        System.out.println("We're reading a Book");
+        System.out.println("We're reading a Book called " + bookName);
+    }
+
+    void canBeReadInAday(){
+        if (numberOfPages < 1100){
+            System.out.println("The book " + bookName + " CAN be read in one day");
+        }
+        else {
+            System.out.println("The book " + bookName + " CANNOT be read in one day");
+        }
     }
 
     @Override

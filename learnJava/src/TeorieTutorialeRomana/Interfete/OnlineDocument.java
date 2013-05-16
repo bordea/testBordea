@@ -36,12 +36,21 @@ class OnlineDocument implements Document{
         this.price = price;
     }
 
-    void isFree(){
-
+    boolean isFree(Document od){
+        boolean free = true;
+        if ( this.price == 0){
+            System.out.println("FREE FREE FREE");
+            free = true;
+        }
+        else {
+            System.out.println("FREE FREE FREE");
+            free = false;
+        }
+        return free;
     }
 
     public void read(){
-        System.out.println("We're reading the online document");
+        System.out.println("We're reading the online document from " + onlineResource);
     }
 
     @Override
