@@ -56,7 +56,7 @@ public class ReadingMain {
 
         for (Document od: onlineDocs){
             System.out.println();
-        }                                                                              */
+        }
 
         ArrayList<Book> books = new ArrayList<Book>();
         books.add(book1);
