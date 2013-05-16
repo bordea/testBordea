@@ -35,7 +35,51 @@ An interface's variables are constant by default even if the static and final mo
 An interface's methods are public by default even if the public modifier is missing.
 In old Java, the abstract modifier is allowed in the interface declaration and its methods declaration. This was then eliminated
 as both the interface and its methods are abstract by default.
+ */
+/*
+The implementation of an interface is made by using the implements keyword.
+A class can implement an infinite number of interfaces.
+A class which implements an interface must specify the implementation cde for all the methods. For this reason. once we create
+ and use a class implementation, an interface shouldn't be modified again. If we do that the signature of the existing methods
+ will lead to compilation errors when compiling the implementation classes.
+The modifying of an interface automatically implies the modifying of all the classes that implement that specific interface.
+An abstract class can also be an interfa's implementation.
+
+
 
 
  */
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
