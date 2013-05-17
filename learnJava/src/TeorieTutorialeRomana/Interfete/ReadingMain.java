@@ -94,6 +94,12 @@ public class ReadingMain {
         }
 
         int[][] array= new int[3][2];
+        array[0][0] = 100;
+        array[0][1] = 40;
+        array[1][0] = 43;
+        array[1][1] = 11;
+        array[2][0] = 22;
+        array[2][1] = 22;
 
         Food poianaAerata = new Poiana("Poiana",,"Aerata");
         Food poianaAmaruie = new Poiana("Poiana",,"Amaruie");
