@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Cadbury extends Chocolate{
     String countryOfProvenience;
+    String productionDate;
 
     public Cadbury() {
     }
@@ -17,9 +18,10 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience) {
+    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String productionDate) {
         super(chocolateName, weight, gramsOfSugar);
         this.countryOfProvenience = countryOfProvenience;
+        this.productionDate = productionDate;
     }
 
     public String getCountryOfProvenience() {
@@ -36,15 +38,24 @@ public class Cadbury extends Chocolate{
                 "chocolateName='" + chocolateName + '\'' +
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
-                "countryOfProvenience='" + countryOfProvenience + '\'' +
+                " countryOfProvenience='" + countryOfProvenience + '\'' +
+                " productionDate='" + productionDate + '\'' +
                 '}';
     }
 
-    @Override
     public void isCheap() {
+
     }
 
-    @Override
     public void enGross() {
+
+    }
+
+    public void isExpired() {
+
+    }
+
+    public void isRecyclable() {
+
     }
 }

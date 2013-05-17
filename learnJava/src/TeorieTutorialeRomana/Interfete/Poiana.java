@@ -32,6 +32,14 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
+    public String getProductionDate() {
+        return productionDate;
+    }
+
+    public void setProductionDate(String productionDate) {
+        this.productionDate = productionDate;
+    }
+
     @Override
     public String toString() {
         return "Poiana{" +
@@ -51,8 +59,11 @@ public class Poiana extends Chocolate{
         System.out.println("This product can only be bought EN-GROSS");
     }
 
-    @Override
     public void isExpired() {
+
+    }
+
+    public void isRecyclable() {
 
     }
 }

@@ -6,4 +6,6 @@ interface ExpiryDate {
     String TODAY = "Sunday";
 
     void isExpired();
+
+    Integer daysTillExpires();
 }

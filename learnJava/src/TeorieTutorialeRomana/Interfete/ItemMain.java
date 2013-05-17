@@ -97,13 +97,13 @@ public class ItemMain {
             read(d);
         }
 
-        Poiana poianaAerata = new Poiana("Poiana",100,15,"Aerata");
-        Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie");
-        Poiana poianaAlba = new Poiana("Poiana",245,45,"Alba");
-        Cadbury snikers = new Cadbury("Cadbury",200,35,"Romania");
-        Cadbury mars = new Cadbury("Cadbury",350,40,"Japan");
-        Cadbury twix = new Cadbury("Cadbury",175,30,"Scotland");
-        Cadbury twirl = new Cadbury("Cadbury",200,80,"Ireland");
+        Poiana poianaAerata = new Poiana("Poiana",100,15,"Aerata","Thursday");
+        Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie","Tuesday");
+        Poiana poianaAlba = new Poiana("Poiana",245,45,"Alba","Monday");
+        Cadbury snikers = new Cadbury("Cadbury",200,35,"Romania","Sunday");
+        Cadbury mars = new Cadbury("Cadbury",350,40,"Japan","Tuesday");
+        Cadbury twix = new Cadbury("Cadbury",175,30,"Scotland","Saturday");
+        Cadbury twirl = new Cadbury("Cadbury",200,80,"Ireland","Friday");
         Map<Chocolate,Integer> chocs = new HashMap<Chocolate, Integer>();
         chocs.put(poianaAerata,sugarGrams(poianaAerata));
         chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
