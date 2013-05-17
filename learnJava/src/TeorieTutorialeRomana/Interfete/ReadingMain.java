@@ -92,6 +92,15 @@ public class ReadingMain {
         for (Document d : docs){
             read(d);
         }
+
+        int[][] array= new int[3][2];
+
+        Food poianaAerata = new Poiana("Poiana",,"Aerata");
+        Food poianaAmaruie = new Poiana("Poiana",,"Amaruie");
+        Food poianaAlba = new Poiana("Poiana",,"Alba");
+
+
+
     }
 }
 
