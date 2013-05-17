@@ -1,8 +1,6 @@
 package TeorieTutorialeRomana.Interfete;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ItemMain {
     public static void read(Document d){
@@ -99,16 +97,19 @@ public class ItemMain {
             read(d);
         }
 
-        Food poianaAerata = new Poiana("Poiana",100,15,"Aerata");
-        Food poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie");
-        Food poianaAlba = new Poiana("Poiana",245,45,"Alba");
-        Map<Chocolate,Integer> foods = new HashMap<Chocolate, Integer>();
-        foods.put(poianaAerata,sugarGrams(poianaAerata));
-
+        Poiana poianaAerata = new Poiana("Poiana",100,15,"Aerata");
+        Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie");
+        Poiana poianaAlba = new Poiana("Poiana",245,45,"Alba");
+        Map<Chocolate,Integer> chocs = new HashMap<Chocolate, Integer>();
+        chocs.put(poianaAerata,sugarGrams(poianaAerata));
+        chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
+        chocs.put(poianaAlba,sugarGrams(poianaAlba));
+        for (Chocolate cheia : chocs.keySet()){
+            Integer x = chocs.get(cheia)
+            System.out.println(cheia + x));
+        }
     }
 }
-
-
 
 
 
