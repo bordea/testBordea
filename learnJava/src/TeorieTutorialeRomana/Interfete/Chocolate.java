@@ -4,23 +4,30 @@ import java.util.Arrays;
 
 abstract class Chocolate implements Food{
     String chocolateName;
-    int[][] grams;
-
+    int weight;
+    int gramsOfSugar;
 
     protected Chocolate() {
     }
 
-    protected Chocolate(String chocolateName) {
+    protected Chocolate(String chocolateName, int weight) {
         this.chocolateName = chocolateName;
+        this.weight = weight;
     }
 
-    protected Chocolate(int[][] grams) {
-        this.grams = grams;
+    protected Chocolate(String chocolateName, int weight, int gramsOfSugar) {
+        this.chocolateName = chocolateName;
+        this.weight = weight;
+        this.gramsOfSugar = gramsOfSugar;
     }
 
-    protected Chocolate(String chocolateName, int[][] grams) {
-        this.chocolateName = chocolateName;
-        this.grams = grams;
+    void isCausingDiabetees(Chocolate c){
+        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
+            System.out.println("This is a dangerous chocolate and there's a risk of diabetees!");
+        }
+        else{
+            System.out.println("This is a diabetees safe chocolate!");
+        }
     }
 
     String getChocolateName() {
@@ -31,19 +38,28 @@ abstract class Chocolate implements Food{
         this.chocolateName = chocolateName;
     }
 
-    int[][] getGrams() {
-        return grams;
+    int getWeight() {
+        return weight;
     }
 
-    void setGrams(int[][] grams) {
-        this.grams = grams;
+    void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    int getGramsOfSugar() {
+        return gramsOfSugar;
+    }
+
+    void setGramsOfSugar(int gramsOfSugar) {
+        this.gramsOfSugar = gramsOfSugar;
     }
 
     @Override
     public String toString() {
         return "Chocolate{" +
                 "chocolateName='" + chocolateName + '\'' +
-                ", grams=" + Arrays.toString(grams) +
+                ", weight=" + weight +
+                ", gramsOfSugar=" + gramsOfSugar +
                 '}';
     }
 }

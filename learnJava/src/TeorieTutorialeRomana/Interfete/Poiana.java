@@ -5,12 +5,6 @@ import java.util.*;
 public class Poiana extends Chocolate{
     String name;
 
-    public void isCheap() {
-    }
-
-    public void enGross() {
-    }
-
     public Poiana() {
     }
 
@@ -18,18 +12,13 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
-    public Poiana(String chocolateName, String name) {
-        super(chocolateName);
+    public Poiana(String chocolateName, int weight, String name) {
+        super(chocolateName, weight);
         this.name = name;
     }
 
-    public Poiana(int[][] grams, String name) {
-        super(grams);
-        this.name = name;
-    }
-
-    public Poiana(String chocolateName, int[][] grams, String name) {
-        super(chocolateName, grams);
+    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name) {
+        super(chocolateName, weight, gramsOfSugar);
         this.name = name;
     }
 
@@ -43,11 +32,19 @@ public class Poiana extends Chocolate{
 
     @Override
     public String toString() {
-        return "Chocolate{" +
+        return "Poiana{" +
                 "chocolateName='" + chocolateName + '\'' +
-                ", grams=" + Arrays.toString(grams) +
+                ", weight=" + weight +
+                ", gramsOfSugar=" + gramsOfSugar +
                 "name='" + name + '\'' +
                 '}';
     }
 
+    public void isCheap() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    public void enGross() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

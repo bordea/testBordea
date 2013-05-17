@@ -12,25 +12,14 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(String chocolateName, String countryOfProvenience) {
-        super(chocolateName);
+    public Cadbury(String chocolateName, int weight, String countryOfProvenience) {
+        super(chocolateName, weight);
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(int[][] grams, String countryOfProvenience) {
-        super(grams);
+    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience) {
+        super(chocolateName, weight, gramsOfSugar);
         this.countryOfProvenience = countryOfProvenience;
-    }
-
-    public Cadbury(String chocolateName, int[][] grams, String countryOfProvenience) {
-        super(chocolateName, grams);
-        this.countryOfProvenience = countryOfProvenience;
-    }
-
-    public void isCheap() {
-    }
-
-    public void enGross() {
     }
 
     public String getCountryOfProvenience() {
@@ -45,8 +34,17 @@ public class Cadbury extends Chocolate{
     public String toString() {
         return "Chocolate{" +
                 "chocolateName='" + chocolateName + '\'' +
-                ", grams=" + Arrays.toString(grams) +
+                ", weight=" + weight +
+                ", gramsOfSugar=" + gramsOfSugar +
                 "countryOfProvenience='" + countryOfProvenience + '\'' +
                 '}';
+    }
+
+    @Override
+    public void isCheap() {
+    }
+
+    @Override
+    public void enGross() {
     }
 }
