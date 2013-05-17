@@ -105,7 +105,7 @@ public class ItemMain {
         chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
         chocs.put(poianaAlba,sugarGrams(poianaAlba));
         for (Chocolate cheia : chocs.keySet()){
-            Integer x = chocs.get(cheia)
+            Integer x = chocs.get(cheia);
             System.out.println(cheia + x));
         }
     }
