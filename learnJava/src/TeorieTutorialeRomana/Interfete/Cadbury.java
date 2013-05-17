@@ -5,6 +5,7 @@ import java.util.*;
 public class Cadbury extends Chocolate{
     String countryOfProvenience;
     String productionDate;
+    int price;
 
     public Cadbury() {
     }
@@ -18,10 +19,11 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String productionDate) {
-        super(chocolateName, weight, gramsOfSugar);
+    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String productionDate, int price) {
+        super(chocolateName, weight, gramsOfSugar,productionDate);
         this.countryOfProvenience = countryOfProvenience;
         this.productionDate = productionDate;
+        this.price = price;
     }
 
     public String getCountryOfProvenience() {
@@ -32,14 +34,30 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
+    public String getProductionDate() {
+        return productionDate;
+    }
+
+    public void setProductionDate(String productionDate) {
+        this.productionDate = productionDate;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
         return "Chocolate{" +
                 "chocolateName='" + chocolateName + '\'' +
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
-                " countryOfProvenience='" + countryOfProvenience + '\'' +
                 " productionDate='" + productionDate + '\'' +
+                " price='" + price + '\'' +
                 '}';
     }
 
@@ -52,6 +70,10 @@ public class Cadbury extends Chocolate{
     }
 
     public void isExpired() {
+
+    }
+
+    public void isFresh() {
 
     }
 

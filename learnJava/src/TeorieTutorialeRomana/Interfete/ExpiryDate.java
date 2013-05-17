@@ -8,4 +8,6 @@ interface ExpiryDate {
     void isExpired();
 
     Integer daysTillExpires();
+
+    void isFresh();
 }

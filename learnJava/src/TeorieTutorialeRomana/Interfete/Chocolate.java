@@ -6,6 +6,7 @@ abstract class Chocolate implements Food{
     String chocolateName;
     int weight;
     int gramsOfSugar;
+    String productionDate;
 
     protected Chocolate() {
     }
@@ -15,7 +16,7 @@ abstract class Chocolate implements Food{
         this.weight = weight;
     }
 
-    protected Chocolate(String chocolateName, int weight, int gramsOfSugar) {
+    protected Chocolate(String chocolateName, int weight, int gramsOfSugar, String productionDate) {
         this.chocolateName = chocolateName;
         this.weight = weight;
         this.gramsOfSugar = gramsOfSugar;
@@ -58,8 +59,40 @@ abstract class Chocolate implements Food{
         return gramsOfSugar;
     }
 
+    String getProductionDate() {
+        return productionDate;
+    }
+
+    void setProductionDate(String productionDate) {
+        this.productionDate = productionDate;
+    }
+
     void setGramsOfSugar(int gramsOfSugar) {
         this.gramsOfSugar = gramsOfSugar;
+    }
+
+    public Integer daysTillExpires(){
+        int zile = 0;
+        System.out.println(this.productionDate);
+        if (this.getProductionDate() == "Monday"){
+            zile = 6;
+        }
+        else if (this.getProductionDate() == "Tuesday"){
+            zile = 5;
+        }
+        else if (this.getProductionDate() == "Wednesday"){
+            zile = 4;
+        }
+        else if (this.getProductionDate() == "Thursday"){
+            zile = 3;
+        }
+        else if (this.getProductionDate() == "Friday"){
+            zile = 2;
+        }
+        else if (this.getProductionDate() == "Saturday"){
+            zile = 1;
+        }
+        return zile;
     }
 
     @Override
@@ -68,6 +101,7 @@ abstract class Chocolate implements Food{
                 "chocolateName='" + chocolateName + '\'' +
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
+                ", productionDate=" + productionDate +
                 '}';
     }
 }

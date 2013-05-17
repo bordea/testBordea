@@ -5,6 +5,7 @@ import java.util.*;
 public class Poiana extends Chocolate{
     String name;
     String productionDate;
+    int price;
 
     public Poiana() {
     }
@@ -18,10 +19,19 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
-    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name, String productionDate) {
-        super(chocolateName, weight, gramsOfSugar);
+    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name, String productionDate, int price) {
+        super(chocolateName, weight, gramsOfSugar, productionDate);
         this.name = name;
         this.productionDate = productionDate;
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getName() {
@@ -40,6 +50,8 @@ public class Poiana extends Chocolate{
         this.productionDate = productionDate;
     }
 
+
+
     @Override
     public String toString() {
         return "Poiana{" +
@@ -47,7 +59,7 @@ public class Poiana extends Chocolate{
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
                 ", name='" + name + '\'' +
-                ", productionDate='" + productionDate + '\'' +
+                ", price='" + price + '\'' +
                 '}';
     }
 
@@ -61,6 +73,16 @@ public class Poiana extends Chocolate{
 
     public void isExpired() {
 
+    }
+
+    public void isFresh() {
+
+    }
+
+    public void isFresh(Chocolate c) {
+        if (c.daysTillExpires()==0){
+            System.out.println("This product is FRESH --> it was produced today !!! ");
+        }
     }
 
     public void isRecyclable() {
