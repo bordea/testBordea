@@ -30,6 +30,14 @@ abstract class Chocolate implements Food{
         }
     }
 
+    Integer sugarGrams(Chocolate c){
+        int sg = 0 ;
+        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
+            sg = (100*(c.getGramsOfSugar()) / c.weight );
+        }
+        return sg;
+    }
+
     String getChocolateName() {
         return chocolateName;
     }

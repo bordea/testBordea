@@ -1,8 +1,10 @@
 package TeorieTutorialeRomana.Interfete;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ReadingMain {
+public class ItemMain {
     public static void read(Document d){
         d.read();
     }
@@ -13,6 +15,10 @@ public class ReadingMain {
 
     public static void canBeReadInAday(Book b){
         b.canBeReadInAday();
+    }
+
+    public static Integer sugarGrams(Chocolate c){
+        return c.sugarGrams(c);
     }
 
     public static void main (String [] main){
@@ -96,8 +102,8 @@ public class ReadingMain {
         Food poianaAerata = new Poiana("Poiana",100,15,"Aerata");
         Food poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie");
         Food poianaAlba = new Poiana("Poiana",245,45,"Alba");
-
-
+        Map<Chocolate,Integer> foods = new HashMap<Chocolate, Integer>();
+        foods.put(poianaAerata,sugarGrams(poianaAerata));
 
     }
 }
