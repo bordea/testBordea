@@ -100,13 +100,21 @@ public class ItemMain {
         Poiana poianaAerata = new Poiana("Poiana",100,15,"Aerata");
         Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Amaruie");
         Poiana poianaAlba = new Poiana("Poiana",245,45,"Alba");
+        Cadbury snikers = new Cadbury("Cadbury",200,35,"Romania");
+        Cadbury mars = new Cadbury("Cadbury",350,40,"Japan");
+        Cadbury twix = new Cadbury("Cadbury",175,30,"Scotland");
+        Cadbury twirl = new Cadbury("Cadbury",200,80,"Ireland");
         Map<Chocolate,Integer> chocs = new HashMap<Chocolate, Integer>();
         chocs.put(poianaAerata,sugarGrams(poianaAerata));
         chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
         chocs.put(poianaAlba,sugarGrams(poianaAlba));
+        chocs.put(snikers,sugarGrams(snikers));
+        chocs.put(mars,sugarGrams(mars));
+        chocs.put(twix,sugarGrams(twix));
+        chocs.put(twirl,sugarGrams(twirl));
         for (Chocolate cheia : chocs.keySet()){
-            Integer x = chocs.get(cheia);
-            System.out.println(cheia + x));
+            System.out.print(cheia);
+            System.out.println(chocs.get(cheia));
         }
     }
 }

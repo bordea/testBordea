@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Poiana extends Chocolate{
     String name;
+    String productionDate;
 
     public Poiana() {
     }
@@ -17,9 +18,10 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
-    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name) {
+    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name, String productionDate) {
         super(chocolateName, weight, gramsOfSugar);
         this.name = name;
+        this.productionDate = productionDate;
     }
 
     public String getName() {
@@ -36,15 +38,21 @@ public class Poiana extends Chocolate{
                 "chocolateName='" + chocolateName + '\'' +
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
-                "name='" + name + '\'' +
+                ", name='" + name + '\'' +
+                ", productionDate='" + productionDate + '\'' +
                 '}';
     }
 
     public void isCheap() {
-        //To change body of implemented methods use File | Settings | File Templates.
+
     }
 
     public void enGross() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        System.out.println("This product can only be bought EN-GROSS");
+    }
+
+    @Override
+    public void isExpired() {
+
     }
 }
