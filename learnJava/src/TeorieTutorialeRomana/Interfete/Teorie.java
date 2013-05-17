@@ -43,15 +43,15 @@ A class which implements an interface must specify the implementation cde for al
  and use a class implementation, an interface shouldn't be modified again. If we do that the signature of the existing methods
  will lead to compilation errors when compiling the implementation classes.
 The modifying of an interface automatically implies the modifying of all the classes that implement that specific interface.
-An abstract class can also be an interfa's implementation.
+An abstract class can also be an interface's implementation.
 
 The diference between an interface and an abstract class
-At first sight an interface isnt't more than an abstract class in which all the methods are abstract(have no implementation).
+At first sight an interface isn't more than an abstract class in which all the methods are abstract(have no implementation).
 Bu an abstract class can never substitute an interface because the difference lays in the fact that some classes are forced to extend
 a particular class and it couldn't extend an abstract class because in Java there isn't any complication to inheritance, it's all
-straightforward. Without the use of the interfaces we couldn;t force the specific class to stick to a specific rule/protocol.
-From a concept point of view the diference lays in:
- - When extending an abstract class this prcess will force a relationship between classes
+straightforward. Without the use of the interfaces we couldn't force the specific class to stick to a specific rule/protocol.
+From a concept point of view the difference lays in:
+ - When extending an abstract class this process will force a relationship between classes
  - the implementation of a specific interface points out only the need for implementing of some specific methods.
 
 Multiple inheritance through interfaces

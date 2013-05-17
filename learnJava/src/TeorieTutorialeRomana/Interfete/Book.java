@@ -49,4 +49,8 @@ class Book implements Document{
                 "numberOfPages='" + numberOfPages + '\'' +
                 '}';
     }
+
+    public void enGross() {
+        System.out.println("This object can be sold EN-GROSS");
+    }
 }

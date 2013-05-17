@@ -7,7 +7,7 @@ public class ReadingMain {
         d.read();
     }
 
-    boolean isFree(OnlineDocument od){
+    static boolean isFree(OnlineDocument od){
         return od.isFree(od);
     }
 
@@ -22,15 +22,15 @@ public class ReadingMain {
         OnlineDocument online4 = new OnlineDocument("www.online_books.com",0);
         OnlineDocument online5 = new OnlineDocument("www.classic_books.com",0);
 
-        ArrayList<Document> onlineDocs = new ArrayList<Document>();
+        ArrayList<OnlineDocument> onlineDocs = new ArrayList<OnlineDocument>();
         onlineDocs.add(online1);
         onlineDocs.add(online2);
         onlineDocs.add(online3);
         onlineDocs.add(online4);
         onlineDocs.add(online5);
 
-        for (Document od: onlineDocs){
-            System.out.println();
+        for (OnlineDocument od: onlineDocs){
+            System.out.println(isFree(od));
         }
 
         Book book1 = new Book("Cartea Cartilor", 1000);
@@ -48,6 +48,29 @@ public class ReadingMain {
 
         for (Book b : books){
             canBeReadInAday(b);
+        }
+
+        Newspaper ziar1 = new Newspaper("Ziua", 5);
+        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4);
+        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5);
+        Newspaper ziar4 = new Newspaper("Adevarul", 4);
+        Newspaper ziar5 = new Newspaper("Java daily",9);
+
+        ArrayList<Newspaper> ziare = new ArrayList<Newspaper>();
+        ziare.add(ziar1);
+        ziare.add(ziar2);
+        ziare.add(ziar3);
+        ziare.add(ziar4);
+        ziare.add(ziar5);
+
+        for (Newspaper b : ziare){
+            read(b);
+            if (b.isCheap(b)){
+                System.out.println("The newspapaer IS cheap");
+            }
+            else{
+                System.out.println("The newspapaer AINT'T cheap");
+            }
         }
 
         ArrayList<Document> docs = new ArrayList<Document>();

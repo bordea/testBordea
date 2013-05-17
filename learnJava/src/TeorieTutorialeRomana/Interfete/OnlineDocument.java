@@ -60,4 +60,8 @@ class OnlineDocument implements Document{
                 ", price=" + price +
                 '}';
     }
+
+    public void enGross() {
+        System.out.println("This object can be sold EN-GROSS");
+    }
 }

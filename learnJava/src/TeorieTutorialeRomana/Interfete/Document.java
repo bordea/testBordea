@@ -1,6 +1,6 @@
 package TeorieTutorialeRomana.Interfete;
 
-interface Document{
+interface Document extends Item{
     void read();
 
 }
