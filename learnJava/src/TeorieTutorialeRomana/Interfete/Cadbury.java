@@ -62,7 +62,13 @@ public class Cadbury extends Chocolate{
     }
 
     public void isCheap() {
-
+        if (price >30){
+            System.out.println(" This a rather expensive piece of Cadbury because the country of provenience is ");
+        }
+        else{
+            System.out.println(" This Cadbury can be enjoyed without burning your pocket" +
+                    " because the country of provinience is " + countryOfProvenience);
+        }
     }
 
     public void enGross() {

@@ -64,7 +64,12 @@ public class Poiana extends Chocolate{
     }
 
     public void isCheap() {
-
+        if (this.price >40){
+            System.out.println(" This a rather expensive piece of Poiana ");
+        }
+        else{
+            System.out.println(" This Poiana can be enjoyed without burning your pocket ");
+        }
     }
 
     public void enGross() {

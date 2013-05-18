@@ -122,6 +122,18 @@ public class ItemMain {
             System.out.println(cheia.daysTillExpires());
         }
 
+        Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
+        poieni.put(poianaAerata, poianaAerata.price);
+        poieni.put(poianaAlba, poianaAlba.price);
+        poieni.put(poianaAmaruie, poianaAmaruie.price);
+            for (Poiana p : poieni.keySet()){
+                System.out.println(p);
+                p.isFresh();
+                p.isCheap();
+            }
+
+
+
     }
 }
 
