@@ -54,11 +54,11 @@ public class ItemMain {
             canBeReadInAday(b);
         }
 
-        Newspaper ziar1 = new Newspaper("Ziua", 5);
-        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4);
-        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5);
-        Newspaper ziar4 = new Newspaper("Adevarul", 4);
-        Newspaper ziar5 = new Newspaper("Java daily",9);
+        Newspaper ziar1 = new Newspaper("Ziua", 5, "Sunday",  20, "carton");
+        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4, "Monday", 10, "hartie");
+        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5, "Wednesday",  20, "carton");
+        Newspaper ziar4 = new Newspaper("Adevarul", 4, "Monday",  20, "carton");
+        Newspaper ziar5 = new Newspaper("Java daily",9, "Sunday",  20, "carton");
 
         ArrayList<Newspaper> ziare = new ArrayList<Newspaper>();
         ziare.add(ziar1);
@@ -118,15 +118,15 @@ public class ItemMain {
   //          cheia.isCausingDiabetees(cheia);
             cheia.isRecyclable();
         }
- /*       for (Chocolate cheia : chocs.keySet()){
+       for (Chocolate cheia : chocs.keySet()){
             System.out.println(cheia);
             System.out.println(cheia.daysTillExpires());
             cheia.isFresh();
             cheia.isExpired();
             cheia.enGross();
-        }                              */
+        }
 
-    /*    Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
+        Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
         poieni.put(poianaAerata, poianaAerata.price);
         poieni.put(poianaAlba, poianaAlba.price);
         poieni.put(poianaAmaruie, poianaAmaruie.price);
@@ -136,7 +136,7 @@ public class ItemMain {
             p.isCheap();
             p.daysTillExpires();
             p.isCausingDiabetees(p);
-        }            */
+        }
 
 
 

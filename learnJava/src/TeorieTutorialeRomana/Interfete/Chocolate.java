@@ -125,4 +125,13 @@ abstract class Chocolate implements Food{
             System.out.println("Cartonul este reciclabil deci Ciucalata este invelita in material reciclabil !!! ");
         }
     }
+
+    public void isRefundable() {
+        if (productionDate =="Sunday" || productionDate =="Saturday" || productionDate == "Friday"){
+
+        }
+        else{
+            System.out.println("This Chocolate ain;t refundable");
+        }
+    }
 }

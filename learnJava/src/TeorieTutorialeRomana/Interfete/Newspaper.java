@@ -1,8 +1,11 @@
 package TeorieTutorialeRomana.Interfete;
 
-public class Newspaper implements Document {
+public class Newspaper implements Document,Packaging,Size {
     String newspaperName;
     int price;
+    String day;
+    int paperSize;
+    String material;
 
     public Newspaper() {}
 
@@ -14,9 +17,36 @@ public class Newspaper implements Document {
         this.price = price;
     }
 
-    public Newspaper(String newspaperName, int price) {
+    public Newspaper(String newspaperName, int price, String day, int paperSize,String material) {
         this.newspaperName = newspaperName;
         this.price = price;
+        this.day = day;
+        this.paperSize = paperSize;
+        this.material = material;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public int getPaperSize() {
+        return paperSize;
+    }
+
+    public void setPaperSize(int paperSize) {
+        this.paperSize = paperSize;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     boolean  isCheap(Newspaper n){
@@ -30,8 +60,20 @@ public class Newspaper implements Document {
         return b;
     }
 
+    public void isRecyclable() {
+        if (material == "carton"){
+            System.out.println("Cartonul este reciclabil deci Ziarul este reciclabil !!! ");
+        }
+    }
 
-    public void read() {
+    public void isRefundable() {
+        if (day =="Sunday" ){
+
+        }
+        else{
+            System.out.println("This Chocolate ain;t refundable");
+        }
+    }public void read() {
     }
 
     public void enGross() {
@@ -61,4 +103,7 @@ public class Newspaper implements Document {
                 '}';
     }
 
+    public void fitInPocket() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
