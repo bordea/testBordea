@@ -18,10 +18,18 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
-    public Poiana(String chocolateName, int weight, int gramsOfSugar, String name, String productionDate, int price) {
-        super(chocolateName, weight, gramsOfSugar, productionDate);
+    public Poiana(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj, String name, int price) {
+        super(chocolateName, weight, gramsOfSugar, productionDate, ambalaj);
         this.name = name;
         this.price = price;
+    }
+
+    public String getAmbalaj() {
+        return ambalaj;
+    }
+
+    public void setAmbalaj(String ambalaj) {
+        this.ambalaj = ambalaj;
     }
 
     public int getPrice() {
@@ -62,10 +70,6 @@ public class Poiana extends Chocolate{
     }
 
     public void enGross() {
-        System.out.println("This product can only be bought EN-GROSS");
-    }
-
-    public void isRecyclable() {
-
+        System.out.println("This Poiana can only be bought EN-Detail");
     }
 }

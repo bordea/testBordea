@@ -5,6 +5,7 @@ import java.util.*;
 public class Cadbury extends Chocolate{
     String countryOfProvenience;
     int price;
+    String ambalaj;
 
     public Cadbury() {
     }
@@ -18,11 +19,12 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String productionDate, int price) {
-        super(chocolateName, weight, gramsOfSugar,productionDate);
+    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String ambalaj,
+                   String productionDate, int price){
+        super(chocolateName, weight, gramsOfSugar,productionDate,ambalaj);
         this.countryOfProvenience = countryOfProvenience;
-        this.productionDate = productionDate;
         this.price = price;
+        this.ambalaj = ambalaj;
     }
 
     public String getCountryOfProvenience() {
@@ -33,20 +35,20 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public String getProductionDate() {
-        return productionDate;
-    }
-
-    public void setProductionDate(String productionDate) {
-        this.productionDate = productionDate;
-    }
-
     public int getPrice() {
         return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getAmbalaj() {
+        return ambalaj;
+    }
+
+    public void setAmbalaj(String ambalaj) {
+        this.ambalaj = ambalaj;
     }
 
     @Override
@@ -62,11 +64,12 @@ public class Cadbury extends Chocolate{
     }
 
     public void enGross() {
-
-    }
-
-    public void isRecyclable() {
-
+        if (countryOfProvenience == "Ireland"){
+            System.out.println("This Cadbury can also be bought EN-Detail");
+        }
+        else{
+            System.out.println("This Cadbury can only be bought EN-GROSS");
+        }
     }
 
     public void isCheap() {

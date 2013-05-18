@@ -7,6 +7,7 @@ abstract class Chocolate implements Food{
     int weight;
     int gramsOfSugar;
     String productionDate;
+    String ambalaj;
 
     protected Chocolate() {
     }
@@ -16,10 +17,12 @@ abstract class Chocolate implements Food{
         this.weight = weight;
     }
 
-    protected Chocolate(String chocolateName, int weight, int gramsOfSugar, String productionDate) {
+    protected Chocolate(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj) {
         this.chocolateName = chocolateName;
         this.weight = weight;
         this.gramsOfSugar = gramsOfSugar;
+        this.productionDate = productionDate;
+        this.ambalaj = ambalaj;
     }
 
     String getChocolateName() {
@@ -115,5 +118,11 @@ abstract class Chocolate implements Food{
                 ", gramsOfSugar=" + gramsOfSugar +
                 ", productionDate=" + productionDate +
                 '}';
+    }
+
+    public void isRecyclable() {
+        if (ambalaj == "carton"){
+            System.out.println("Cartonul este reciclabil deci Ciucalata este invelita in material reciclabil !!! ");
+        }
     }
 }
