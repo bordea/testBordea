@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Cadbury extends Chocolate{
     String countryOfProvenience;
-    String productionDate;
     int price;
 
     public Cadbury() {
@@ -57,33 +56,25 @@ public class Cadbury extends Chocolate{
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
                 " productionDate='" + productionDate + '\'' +
+                " countryOfProvenience='" + countryOfProvenience + '\'' +
                 " price='" + price + '\'' +
                 '}';
-    }
-
-    public void isCheap() {
-        if (price >30){
-            System.out.println(" This a rather expensive piece of Cadbury because the country of provenience is ");
-        }
-        else{
-            System.out.println(" This Cadbury can be enjoyed without burning your pocket" +
-                    " because the country of provinience is " + countryOfProvenience);
-        }
     }
 
     public void enGross() {
 
     }
 
-    public void isExpired() {
-
-    }
-
-    public void isFresh() {
-
-    }
-
     public void isRecyclable() {
 
+    }
+
+    public void isCheap() {
+        if (this.price >40){
+            System.out.println(" This a rather expensive piece of Poiana ");
+        }
+        else{
+            System.out.println(" This Poiana can be enjoyed without burning your pocket ");
+        }
     }
 }

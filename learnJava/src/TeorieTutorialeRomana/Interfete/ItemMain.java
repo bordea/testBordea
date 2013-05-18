@@ -120,6 +120,8 @@ public class ItemMain {
         for (Chocolate cheia : chocs.keySet()){
             System.out.println(cheia);
             System.out.println(cheia.daysTillExpires());
+            cheia.isFresh();
+            cheia.isExpired();
         }
 
         Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
@@ -130,6 +132,7 @@ public class ItemMain {
                 System.out.println(p);
                 p.isFresh();
                 p.isCheap();
+
             }
 
 

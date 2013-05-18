@@ -22,23 +22,6 @@ abstract class Chocolate implements Food{
         this.gramsOfSugar = gramsOfSugar;
     }
 
-    void isCausingDiabetees(Chocolate c){
-        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
-            System.out.println("This is a dangerous chocolate and there's a risk of diabetees!");
-        }
-        else{
-            System.out.println("This is a diabetees safe chocolate!");
-        }
-    }
-
-    Integer sugarGrams(Chocolate c){
-        int sg = 0 ;
-        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
-            sg = (100*(c.getGramsOfSugar()) / c.weight );
-        }
-        return sg;
-    }
-
     String getChocolateName() {
         return chocolateName;
     }
@@ -71,6 +54,23 @@ abstract class Chocolate implements Food{
         this.gramsOfSugar = gramsOfSugar;
     }
 
+    void isCausingDiabetees(Chocolate c){
+        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
+            System.out.println("This is a dangerous chocolate and there's a risk of diabetees!");
+        }
+        else{
+            System.out.println("This is a diabetees safe chocolate!");
+        }
+    }
+
+    Integer sugarGrams(Chocolate c){
+        int sg = 0 ;
+        if (  (100*(c.getGramsOfSugar()) / c.weight  ) > 15){
+            sg = (100*(c.getGramsOfSugar()) / c.weight );
+        }
+        return sg;
+    }
+
     public Integer daysTillExpires(){
         int zile = 0;
         System.out.println(this.productionDate);
@@ -95,6 +95,17 @@ abstract class Chocolate implements Food{
         return zile;
     }
 
+    public void isFresh(){
+        if (daysTillExpires() <2){
+            System.out.println("This Chocolate is fresh because its made in the last 2 days !!!");
+        }
+    }
+
+    public void isExpired() {
+        if (daysTillExpires()>4){
+            System.out.println("This Cholocalate has been on the shelf for over 4 days therefore it's expired !!! ");
+        }
+    }
 
     @Override
     public String toString() {
