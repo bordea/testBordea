@@ -2,9 +2,10 @@ package TeorieTutorialeRomana.Interfete;
 
 import java.util.*;
 
-public class Poiana extends Chocolate{
+public class Poiana extends Chocolate implements Promotion{
     String name;
     int price;
+    int boughtForPromotion;
 
     public Poiana() {
     }
@@ -75,4 +76,7 @@ public class Poiana extends Chocolate{
         System.out.println("This Poiana can only be bought EN-Detail");
     }
 
+    public void whatPromotion() {
+
+    }
 }

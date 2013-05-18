@@ -54,11 +54,11 @@ public class ItemMain {
             canBeReadInAday(b);
         }
 
-        Newspaper ziar1 = new Newspaper("Ziua", 5, "Sunday",  20, "carton","english");
-        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4, "Monday", 10, "hartie","welsh");
-        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5, "Wednesday",  20, "carton","romanian");
-        Newspaper ziar4 = new Newspaper("Adevarul", 4, "Monday",  20, "carton","moldavian");
-        Newspaper ziar5 = new Newspaper("Java daily",9, "Sunday",  20, "carton","scotish");
+        Newspaper ziar1 = new Newspaper("Ziua", 5, "Sunday",  20, "carton","english","weekly");
+        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4, "Monday", 10, "hartie","welsh","monthly");
+        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5, "Wednesday",  20, "carton","romanian","daily");
+        Newspaper ziar4 = new Newspaper("Adevarul", 4, "Monday",  20, "carton","moldavian","biweekly");
+        Newspaper ziar5 = new Newspaper("Java daily",9, "Sunday",  20, "carton","scotish","daily");
 
         ArrayList<Newspaper> ziare = new ArrayList<Newspaper>();
         ziare.add(ziar1);
@@ -77,6 +77,7 @@ public class ItemMain {
             }
             b.fitInPocket();
             b.isEuropean();
+            b.whatType();
         }
 
         ArrayList<Document> docs = new ArrayList<Document>();

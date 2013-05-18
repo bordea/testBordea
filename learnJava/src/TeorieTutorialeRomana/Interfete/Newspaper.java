@@ -1,12 +1,14 @@
 package TeorieTutorialeRomana.Interfete;
 
-public class Newspaper implements Document,Packaging,Size,Producer {
+public class Newspaper implements Document,Packaging,Size,Producer, Promotion {
     String newspaperName;
     int price;
     String day;
     int paperSize;
     String material;
     String language;
+    String frequence;
+    int boughtForPromotion;
 
     public Newspaper() {}
 
@@ -18,7 +20,7 @@ public class Newspaper implements Document,Packaging,Size,Producer {
         this.price = price;
     }
 
-    public Newspaper(String newspaperName, int price, String day, int paperSize,String material, String language) {
+    public Newspaper(String newspaperName, int price, String day, int paperSize,String material, String language, String frequence) {
         this.newspaperName = newspaperName;
         this.price = price;
         this.day = day;
@@ -48,6 +50,22 @@ public class Newspaper implements Document,Packaging,Size,Producer {
 
     public void setMaterial(String material) {
         this.material = material;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getFrequence() {
+        return frequence;
+    }
+
+    public void setFrequence(String frequence) {
+        this.frequence = frequence;
     }
 
     boolean  isCheap(Newspaper n){
@@ -125,5 +143,24 @@ public class Newspaper implements Document,Packaging,Size,Producer {
         if (country(language) == "Romania" || country(language) == "UK"){
             System.out.println(newspaperName + " is being read in " + country(language) + " which is in Europe");
         }
+    }
+
+    public void whatType(){
+        if (frequence =="weekly"){
+            System.out.println("Acesta este un ziar care apare saptamanal in ziua de "+ day);
+        }
+        else if (frequence =="monthly"){
+            System.out.println("Acesta este un ziar care apare lunar");
+        }
+        else if (frequence =="biweekly"){
+            System.out.println("Acesta este un ziar care apare la doua saptamani in ziua de " + day);
+        }
+        else if (frequence =="daily"){
+            System.out.println("Acesta este un ziar care apare zilnic");
+        }
+    }
+
+    public void whatPromotion() {
+
     }
 }
