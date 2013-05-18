@@ -1,11 +1,12 @@
 package TeorieTutorialeRomana.Interfete;
 
-public class Newspaper implements Document,Packaging,Size {
+public class Newspaper implements Document,Packaging,Size,Producer {
     String newspaperName;
     int price;
     String day;
     int paperSize;
     String material;
+    String language;
 
     public Newspaper() {}
 
@@ -17,7 +18,7 @@ public class Newspaper implements Document,Packaging,Size {
         this.price = price;
     }
 
-    public Newspaper(String newspaperName, int price, String day, int paperSize,String material) {
+    public Newspaper(String newspaperName, int price, String day, int paperSize,String material, String language) {
         this.newspaperName = newspaperName;
         this.price = price;
         this.day = day;
@@ -106,6 +107,23 @@ public class Newspaper implements Document,Packaging,Size {
     public void fitInPocket() {
         if (paperSize < 10*4){
             System.out.println(" This newspaper folded in 4 fits in the pocket ");
+        }
+    }
+
+    public String country(String language){
+        String c = "Nobody's Country";
+        if (language == "english" || language == "scotish" || language == "welsh"){
+                c = "UK";
+        }
+        else if (language == "romanian" || language == "moldavian"){
+            c= "Romania";
+        }
+        return c;
+    }
+
+    public void isEuropean() {
+        if (country(language) == "Romania" || country(language) == "UK"){
+            System.out.println(newspaperName + " is being read in " + country(language) + " which is in Europe");
         }
     }
 }

@@ -2,7 +2,7 @@ package TeorieTutorialeRomana.Interfete;
 
 import java.util.*;
 
-public class Cadbury extends Chocolate{
+public class Cadbury extends Chocolate implements Producer{
     String countryOfProvenience;
     int price;
     String ambalaj;
@@ -80,6 +80,13 @@ public class Cadbury extends Chocolate{
         }
         else{
             System.out.println(" This Poiana can be enjoyed without burning your pocket ");
+        }
+    }
+
+    public void isEuropean() {
+        if (countryOfProvenience == "Romania" || countryOfProvenience == "Wales" ||
+        countryOfProvenience == "Moldova" || countryOfProvenience == "Scotland"){
+            System.out.println(chocolateName + " was produced in " + chocolateName + " which is in Europe");
         }
     }
 }

@@ -54,11 +54,11 @@ public class ItemMain {
             canBeReadInAday(b);
         }
 
-        Newspaper ziar1 = new Newspaper("Ziua", 5, "Sunday",  20, "carton");
-        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4, "Monday", 10, "hartie");
-        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5, "Wednesday",  20, "carton");
-        Newspaper ziar4 = new Newspaper("Adevarul", 4, "Monday",  20, "carton");
-        Newspaper ziar5 = new Newspaper("Java daily",9, "Sunday",  20, "carton");
+        Newspaper ziar1 = new Newspaper("Ziua", 5, "Sunday",  20, "carton","english");
+        Newspaper ziar2 = new Newspaper("Samanta Adevarului", 4, "Monday", 10, "hartie","welsh");
+        Newspaper ziar3 = new Newspaper("Evenimentul Zilei",5, "Wednesday",  20, "carton","romanian");
+        Newspaper ziar4 = new Newspaper("Adevarul", 4, "Monday",  20, "carton","moldavian");
+        Newspaper ziar5 = new Newspaper("Java daily",9, "Sunday",  20, "carton","scotish");
 
         ArrayList<Newspaper> ziare = new ArrayList<Newspaper>();
         ziare.add(ziar1);
@@ -76,6 +76,7 @@ public class ItemMain {
                 System.out.println("The newspapaer AINT'T cheap");
             }
             b.fitInPocket();
+            b.isEuropean();
         }
 
         ArrayList<Document> docs = new ArrayList<Document>();
@@ -102,9 +103,9 @@ public class ItemMain {
         Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Tuesday","carton",18,"Amaruie",44);
         Poiana poianaAlba = new Poiana("Poiana",245,45,"Monday","carton",10,"Alba",54);
         Cadbury snikers = new Cadbury("Cadbury",200,35,"Sunday","carton",15,"Romania",23);
-        Cadbury mars = new Cadbury("Cadbury",350,40,"Tuesday","hartie",6,"Japan",43);
+        Cadbury mars = new Cadbury("Cadbury",350,40,"Tuesday","hartie",6,"Moldova",43);
         Cadbury twix = new Cadbury("Cadbury",175,30,"Saturday","hartie",17,"Scotland",25);
-        Cadbury twirl = new Cadbury("Cadbury",200,80,"Friday","carton",4,"Ireland",54);
+        Cadbury twirl = new Cadbury("Cadbury",200,80,"Friday","carton",4,"Wales",54);
         Map<Chocolate,Integer> chocs = new HashMap<Chocolate, Integer>();
         chocs.put(poianaAerata,sugarGrams(poianaAerata));
         chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
