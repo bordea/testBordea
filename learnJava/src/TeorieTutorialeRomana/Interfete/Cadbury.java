@@ -19,9 +19,9 @@ public class Cadbury extends Chocolate{
         this.countryOfProvenience = countryOfProvenience;
     }
 
-    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String ambalaj,
+    public Cadbury(String chocolateName, int weight, int gramsOfSugar, String countryOfProvenience, String ambalaj, int length,
                    String productionDate, int price){
-        super(chocolateName, weight, gramsOfSugar,productionDate,ambalaj);
+        super(chocolateName, weight, gramsOfSugar,productionDate,ambalaj,length);
         this.countryOfProvenience = countryOfProvenience;
         this.price = price;
         this.ambalaj = ambalaj;
@@ -58,6 +58,8 @@ public class Cadbury extends Chocolate{
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
                 " productionDate='" + productionDate + '\'' +
+                " ambalaj='" + ambalaj + '\'' +
+                " length='" + length + '\'' +
                 " countryOfProvenience='" + countryOfProvenience + '\'' +
                 " price='" + price + '\'' +
                 '}';

@@ -18,8 +18,9 @@ public class Poiana extends Chocolate{
         this.name = name;
     }
 
-    public Poiana(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj, String name, int price) {
-        super(chocolateName, weight, gramsOfSugar, productionDate, ambalaj);
+    public Poiana(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj, int length,
+                    String name, int price) {
+        super(chocolateName, weight, gramsOfSugar, productionDate, ambalaj, length);
         this.name = name;
         this.price = price;
     }
@@ -55,6 +56,7 @@ public class Poiana extends Chocolate{
                 ", weight=" + weight +
                 ", gramsOfSugar=" + gramsOfSugar +
                 ", productionDater=" + productionDate +
+                ", length=" + length +
                 ", name='" + name + '\'' +
                 ", price='" + price + '\'' +
                 '}';

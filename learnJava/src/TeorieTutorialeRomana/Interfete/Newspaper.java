@@ -104,6 +104,8 @@ public class Newspaper implements Document,Packaging,Size {
     }
 
     public void fitInPocket() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        if (paperSize < 10*4){
+            System.out.println(" This newspaper folded in 4 fits in the pocket ");
+        }
     }
 }

@@ -8,6 +8,7 @@ abstract class Chocolate implements Food{
     int gramsOfSugar;
     String productionDate;
     String ambalaj;
+    int length;
 
     protected Chocolate() {
     }
@@ -17,12 +18,13 @@ abstract class Chocolate implements Food{
         this.weight = weight;
     }
 
-    protected Chocolate(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj) {
+    protected Chocolate(String chocolateName, int weight, int gramsOfSugar, String productionDate, String ambalaj, int length) {
         this.chocolateName = chocolateName;
         this.weight = weight;
         this.gramsOfSugar = gramsOfSugar;
         this.productionDate = productionDate;
         this.ambalaj = ambalaj;
+        this.length = length;
     }
 
     String getChocolateName() {
@@ -55,6 +57,22 @@ abstract class Chocolate implements Food{
 
     void setGramsOfSugar(int gramsOfSugar) {
         this.gramsOfSugar = gramsOfSugar;
+    }
+
+    String getAmbalaj() {
+        return ambalaj;
+    }
+
+    void setAmbalaj(String ambalaj) {
+        this.ambalaj = ambalaj;
+    }
+
+    int getLength() {
+        return length;
+    }
+
+    void setLength(int length) {
+        this.length = length;
     }
 
     void isCausingDiabetees(Chocolate c){
@@ -132,6 +150,12 @@ abstract class Chocolate implements Food{
         }
         else{
             System.out.println("This Chocolate ain;t refundable");
+        }
+    }
+
+    public void fitInPocket(){
+        if (length <16){
+            System.out.println(" This chocolate fits in the pocket ");
         }
     }
 }

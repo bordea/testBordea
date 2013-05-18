@@ -75,6 +75,7 @@ public class ItemMain {
             else{
                 System.out.println("The newspapaer AINT'T cheap");
             }
+            b.fitInPocket();
         }
 
         ArrayList<Document> docs = new ArrayList<Document>();
@@ -97,13 +98,13 @@ public class ItemMain {
             read(d);
         }
 
-        Poiana poianaAerata = new Poiana("Poiana",100,15,"Thursday","hartie","Aerata",33);
-        Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Tuesday","carton","Amaruie",44);
-        Poiana poianaAlba = new Poiana("Poiana",245,45,"Monday","carton","Alba",54);
-        Cadbury snikers = new Cadbury("Cadbury",200,35,"Sunday","carton","Romania",23);
-        Cadbury mars = new Cadbury("Cadbury",350,40,"Tuesday","hartie","Japan",43);
-        Cadbury twix = new Cadbury("Cadbury",175,30,"Saturday","hartie","Scotland",25);
-        Cadbury twirl = new Cadbury("Cadbury",200,80,"Friday","carton","Ireland",54);
+        Poiana poianaAerata = new Poiana("Poiana",100,15,"Thursday","hartie",10,"Aerata",33);
+        Poiana poianaAmaruie = new Poiana("Poiana",500,98,"Tuesday","carton",18,"Amaruie",44);
+        Poiana poianaAlba = new Poiana("Poiana",245,45,"Monday","carton",10,"Alba",54);
+        Cadbury snikers = new Cadbury("Cadbury",200,35,"Sunday","carton",15,"Romania",23);
+        Cadbury mars = new Cadbury("Cadbury",350,40,"Tuesday","hartie",6,"Japan",43);
+        Cadbury twix = new Cadbury("Cadbury",175,30,"Saturday","hartie",17,"Scotland",25);
+        Cadbury twirl = new Cadbury("Cadbury",200,80,"Friday","carton",4,"Ireland",54);
         Map<Chocolate,Integer> chocs = new HashMap<Chocolate, Integer>();
         chocs.put(poianaAerata,sugarGrams(poianaAerata));
         chocs.put(poianaAmaruie,sugarGrams(poianaAmaruie));
@@ -124,9 +125,10 @@ public class ItemMain {
             cheia.isFresh();
             cheia.isExpired();
             cheia.enGross();
+            cheia.fitInPocket();
         }
 
-        Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
+    /*    Map<Poiana,Integer> poieni = new HashMap<Poiana, Integer>();
         poieni.put(poianaAerata, poianaAerata.price);
         poieni.put(poianaAlba, poianaAlba.price);
         poieni.put(poianaAmaruie, poianaAmaruie.price);
@@ -136,7 +138,7 @@ public class ItemMain {
             p.isCheap();
             p.daysTillExpires();
             p.isCausingDiabetees(p);
-        }
+        }                                  */
 
 
 
