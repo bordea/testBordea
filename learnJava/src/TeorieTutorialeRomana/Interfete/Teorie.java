@@ -63,9 +63,31 @@ The interfaces have no implementation and don't take any memory space at their i
 		interface InterfaceName extends Interface1, Interface2, ...
 An interface inherits both the constants and the methods from its superinterfaces.
 A class inherits just the constants from an interface
-
  */
+/*
+The use of interfaces
+An interface defines a 'label'(a protocol) that can be implemented by any class regardless of the class hierarchy the class belongs
+too. When we use interfaces we:
+ - have similarities between classes (a link between classes shouldn;t be enforced)
+ - have the interface's methods implemented by all the classes that implent the interface. This way we can easily implement
+    similar classes easily
+ - can specigfy and object's methods without necessarily implementing them, these can be used to deliver classes to other
+    developers (also called anonym objects)
+ - can transmit methods with parameters
 
+Groups of Constants creation
+
+Because any variable of an interface is public, static and final by default, the interface represents a convinient method
+for creating groups of constants.
+public interface Months {
+			int JAN=1, FEB=2, MAR=3, APR=4, MAY=5, JUN=6, JUL=7, AUG=8, SEP=9, OCT=10, NOV=11, DEC=12;
+		}
+When we use these constants we do it in the folowing format:
+		if (luna < Luni.DEC)
+			luna ++
+		else
+			luna = Luni.IAN;
+ */
 
 }
 
