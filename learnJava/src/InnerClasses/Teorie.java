@@ -74,7 +74,40 @@ new MyOuter().new MyInner();
 outerObjRef.new MyInner();
  */
 /*
+Folosirea instantelor inner si outer din interiorul clasei inner
+In general, un obiect se refera la sine insusi prin folosirea de this.
+■ this se poate folosi doar codul instantei ( nu din cod static !)
+■ referinta this ‘points’ spre obiectul care se executa curent.
+■ referinta this este modul prin care un obiect poate sa transmita o referinta catre sine , unei alte metode ( ca argument de metoda )
 
+public void myMethod() {
+MyClass mc = new MyClass();
+mc.doStuff(this); // pass a ref to object running myMethod
+}
+
+Intr-o clasa inner, referinta this se refera la instanta clasei inner. Daca vrem sa transmitem o referinta catre clasa outer dupa cum urmeaza:
+
+class MyInner {
+public void seeOuter() {
+System.out.println("Outer x is " + x);
+System.out.println("Inner class ref is " + this);
+System.out.println("Outer class ref is " + MyOuter.this);
+}
+}
+
+Cele 2 reguli care trebuie respectate cand o clasa inner se auto-referentiaza sau o instantiere outer sunt:
+■ Trebuie sa facem referinta a clasei inner din interiorul codului ei, folosind this
+■ Ca sa facem referinta la o instanta a clasei outer, folosim ‘NumeleClaseiOuter.this’
+
+Modificatori pentru membri aplicati Clasei Inner
+Deoarece o regular inner class este un membru al clasei outer (la fel ca si variabilele si metodele) putem sa ii aplicam urmatorii modificatori:
+■ final
+■ abstract
+■ public
+■ private
+■ protected
+■ static— daca folosim static atunci vom avea o static nested class in loc de o clasa inner
+■ strictfp
 
 
 
