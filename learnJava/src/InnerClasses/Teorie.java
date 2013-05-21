@@ -120,8 +120,23 @@ O clasa inner method-local poate fi instantiata doar in interiorul acelei metode
 orice alta metoda din interiorul sau din exteriorul clasei outer va putea vreodata sa instantieze clasa inner method-local.
  La fel ca si obiectele regular inner class, clasa inner method-local are o relatie speciala cu obiectul clasa outer si poate
   sa ii acceseze membri privati. DAR, obiectele clasei inner nu pot folosi variabilele metodei unde clasa inner a fost declarata.
- */
+Variabilele locale ale unei metode sunt stocate pe STACK is exista doar atata timp cat metoda ruleaza. Cand metoda se termina
+ de executat STACK-ul este golit si variabilele distruse. Clasa inner, insa, va ramane pe HEAP daca o referinta a ei a fost
+  transmisa in alt cod si apoi stocat intr-o instance variable. Deoarece variabilele locale nu au garantata viata pentru
+   tot timpul care clasa inner method-local exista in memorie, atunci clasa inner nu le va putea folosi. Solutia ar fi sa
+    facem aceste variabile FINALE.
+Singuri modificatori pe care putem sa ii aplicam claselor inner method-local sunt abstract si final.(acestea sunt cele mai
+ intalnite cazuri)
 
+O CLASA LOCALA DECLARATA INTR-O METODA STATICA ARE ACCES DOAR LA MEMBRII CLASEI OUTER DEOARECE NU EXISTA O ASOCIERE PRINTR-O
+ INSTANTIERE A CLASEI OUTER.
+DACA SUNTEM INTR-O METODA STATICA ATUNCI NU EXISTA THIS, DECI O CLASA INNER INTR-O METODA STATICA ARE ACELEASI RESTRICTII
+ CA SI METODA STATICA → NU ARE ACCES LA INSANCE VARIABLES
+
+
+Clasele Inner Anonime sunt clase care se declara fara a avea un nume de clasa. Aceste clase se pot defini atat intr-o metoda
+ cat si in argumentul pe care il transmitem unei metode.
+ */
 
 
 }

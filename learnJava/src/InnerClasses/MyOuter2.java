@@ -5,7 +5,9 @@ class MyOuter2 {                                        // definirea clasei oute
 
     void doStuff() {                                    // definirea metodei doStuff()
 
-        class MyInner {                                 // definirea clasei inner
+        final String z = "Aceasta este variabila locala";
+
+        class MyInner2 {                                 // definirea clasei inner
 
             public void vedemOuteru() {                    // metoda clasei inner
 
@@ -13,13 +15,22 @@ class MyOuter2 {                                        // definirea clasei oute
 
                 System.out.println("Clasa de dinafara este " + x);
 
+                System.out.println("Avem acces la variabila locala ?  " + z);
+
             }                                           // inchidem metoda clasei inner
 
         }                                               // inchidem definirea inner class
 
-        MyInner mi = new MyInner();                     // instantierea se va face DOAR DUPA definirea clasei
+        MyInner2 mi = new MyInner2();                     // instantierea se va face DOAR DUPA definirea clasei
         mi.vedemOuteru();
 
     }                                                   // inchidem metoda clasei outer
 
-}                                                       // inchidem clasa outer
+    public static void main(String [] args){
+
+        MyOuter2 outer = new MyOuter2();
+        outer.doStuff();
+
+    }
+
+}
