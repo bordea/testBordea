@@ -136,6 +136,54 @@ DACA SUNTEM INTR-O METODA STATICA ATUNCI NU EXISTA THIS, DECI O CLASA INNER INTR
 
 Clasele Inner Anonime sunt clase care se declara fara a avea un nume de clasa. Aceste clase se pot defini atat intr-o metoda
  cat si in argumentul pe care il transmitem unei metode.
+ class Popcorn {
+public void pop() {
+System.out.println("popcorn");
+}
+}
+class Food {
+Popcorn p = new Popcorn() {
+public void pop() {
+System.out.println("anonymous popcorn");
+}
+};
+}
+
+Declaratia variabilei referinta p de tip Popcorn este urmata de o noua clasa care nu are nume. Cu toate acestea ea este o subclasa a clasei Popcorn. Observam ca in loc de ; avem { pentru definirea clasei anonime.
+Pe urmatorea linie observam metoda pop() care va override metoda pop() din Popcorn, superclasa clasei anonime. In general, acesta este scopul principal cand folosim clase anonime → sa override una sau mai multe metode. (sau sa implementeze metode ale unei interfete)
+Apoi putem sa adaugam cate statement-uri vrem, in cazul de fata avem doar unul.
+Clasa anonima se va incheia cu } dupa ce incheiem metoda tot cu }. Observam ca dupa inchiderea declaratiei clasei anonime cu } avem ; ceea ce ne spune ca statementul care a inceput cu cateva linii mai sus se incheie aici. Deci avem un statement care declara si initializeaza referinta variabila Popcorn. Vom avea, astfel, o referinta Popcorn catre on instanta a unei clase anonime, subclasa a clasei Popcorn.
+Am folosit o referinta a unei superclase ca sa ne referim la un obiect subclasa. Practic, putem sa apelam metode ale unei clase inner anonime care sunt definite in reference variable type.
+Daca overriding este destul de simplu, invocarea unei noi metode este putin mai complicata. Superclasa nu va recunoaste noua metoda declarata in clasa anonima si vom avea erori de compilare daca incercam sa invocam vreo metoda printr-o referinta la o clasa anonima, metoda care nu e definita in superclasa.
+
+Daca pana acum am creat o subclasa anonima de un type specific, al doilea mod de folosire al clasei inner anonime este cel prin care cream o implementare anonima de tipul interfetei specificate. Astfel, in loc sa avem Popcorn clasa vom avea Popcorn interfata. In acest fel noua clasa anonima ar fi o implementare a interfetei in loc de o subclasa a clasei. Exemplu:
+
+interface Cookable {
+public void cook();
+}
+class Food {
+Cookable c = new Cookable() {
+public void cook() {
+System.out.println("anonymous cookable implementer");
+}
+};
+}
+
+Si acest cod creaza o instanta pentru o clasa inner anonima, dar de aceasta data avem de-a face cu o implementare a interfetei
+ Cookable(). Acesta este singurul caz in Java cand new InterfaceName este acceptat de compilator ca sintaxa corecta.(Cookable()
+  este o interfata si nu o clasa de tip nonabstract)
+Codoul de mai sus nu instantiaza un obiect de tip Cookable() ci creaza o instanta new , anonymous, implementer de Cookable().
+Cookable c = new Cookable() {
+Putem citi aceasta linie → Declaram o variabila eferinta de tip Cookable care se va referi la un obiect dintr-o clasa care
+ implementeaza interfata Cookable.
+Bineneteles ca va trebui sa facem o clasa aici pentru ca inca nu avem una. Nu avem nevoie de nume pentru aceasta clasa chiar
+ daca aceasta va fi clasa care implementeaza.
+Implementatoarele de interfete anonime pot sa implementeze DOAR O interfata si nici macar nu poate sa extinda o clasa si sa
+ implementeze in acelasi timp.
+Clasa inner va fi ori o subclasa a unei anumite clase (si nu va implementa direct, adica folosind keywordul implements, nici
+o interfata) sau o implementare a unei singure interfete.
+Daca clasa inner anonima este o subclasa a unei class type, aceasta devine automat o implementare a oricarei interfete
+ implementate de superclasa
  */
 
 
