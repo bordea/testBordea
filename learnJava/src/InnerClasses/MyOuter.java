@@ -47,7 +47,7 @@ class MyOuter {
         }
     }
 
-    abstract class In2{
+    class In2{
         public int calculeaza_suma(int i){
             int suma = 0;
             for (int j = 0; j<i; j++){
@@ -72,6 +72,11 @@ class MyOuter {
 
         MyOuter.InClass innC = new MyOuter().new InClass();
         innC.vedeOuter();
+
+        MyOuter.In2 innClass = new MyOuter().new In2();
+        int k = 40;
+        System.out.println("Suma primelor " + k + " numere este --> " + innClass.calculeaza_suma(k));
+
 
     }
 }

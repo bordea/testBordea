@@ -108,9 +108,18 @@ Deoarece o regular inner class este un membru al clasei outer (la fel ca si vari
 ■ protected
 ■ static— daca folosim static atunci vom avea o static nested class in loc de o clasa inner
 ■ strictfp
+ */
+/*
+O regular inner class se situeaza in interiorul clasei outer dar in afara oricarei metode a clasei outer. Deci o gasim la
+ acelasi nivel cu variablilele clasei outer.
+Putem sa declaram o clasa inner si in interiorul unei metode dar tebuie sa avem grija sa o instantiam doar dupa ce o declaram
+si nicidecum inainte.
 
-
-
+Ce poate si ce nu poate sa faca un obiect inner method-local
+O clasa inner method-local poate fi instantiata doar in interiorul acelei metode unde a fost definita. Nici un alt cod din
+orice alta metoda din interiorul sau din exteriorul clasei outer va putea vreodata sa instantieze clasa inner method-local.
+ La fel ca si obiectele regular inner class, clasa inner method-local are o relatie speciala cu obiectul clasa outer si poate
+  sa ii acceseze membri privati. DAR, obiectele clasei inner nu pot folosi variabilele metodei unde clasa inner a fost declarata.
  */
 
 
