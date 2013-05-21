@@ -3,6 +3,8 @@ package InnerClasses;
 class MyOuter {
     private int x = 7;
 
+    Inner2 i2 = new Inner2();
+
     public void makeInner() {
         MyInner in = new MyInner();                      // instantiere a clasei inner --> este la fel ca instantierea oricarei alte clase
         in.seeOuter();
@@ -33,5 +35,7 @@ class MyOuter {
         MyOuter.Inner2 in = new MyOuter().new Inner2();
         int i = 10;
         System.out.println("Suma primelor " + i + " numere este --> " + in.calculeaza_suma(i));
+
+
     }
 }
