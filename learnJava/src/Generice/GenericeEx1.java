@@ -22,6 +22,10 @@ public class GenericeEx1 {
             System.out.println(s);
         }
 
+        for (String s: str) {
+            printElement(str);
+        }
+
         List<Integer> ints = new ArrayList<Integer>();
         ints.add(1);
         ints.add(2);
@@ -35,5 +39,20 @@ public class GenericeEx1 {
             System.out.println(sum);
         }
 
+   //     printList(str);
+
     }
+
+    public static <E> void printElement(E e) {
+        System.out.println(e);
+    }
+
+  /*  public static <L> void printList(L l, List<L> lista) {
+        for (L theList : lista){
+            System.out.println();
+        }
+    }      */
+
+
+
 }
