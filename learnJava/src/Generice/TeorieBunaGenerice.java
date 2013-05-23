@@ -25,6 +25,28 @@ Metode Generice si Constructori Generici
 La fel ca si clasele si interfetele, metodele si constructori pot fi generice daca declara unul sau mai multe variabile tip.
 ex:		public static <t> T getFirst(List<T> list)
 Aceasta metoda va accepta o referinta la o LIST<T> si va returna un obiect de tip T.
+Iterarea
+Multe clasa din libraria java, cum ar fi Iterator<T>, sunt generice. Metoda iterator() a interfetei List<T> returneaza un Iterator<T> care poate fi folosit fara paranteze pentru obiectul pe care il returneaza metoda sa T.next()
+	for (Iterator<String> iter = str.iterator(); iter.hasNext();) {
+		String s = iter.next();
+		System.out.print(s);
+	}
+
+Sintaxa ForEach
+	for (String s: str) {
+		System.out.print(s);
+	}
+
+Autoboxing/Autounboxing
+Aceste doua facilitati ale Java sunt folosite automat cand folosim generice.
+	List<Integer> ints = new ArrayList<Integer>();
+	ints.add(0);
+	ints.add(1);
+
+	int sum = 0;
+	for (int i : ints) {
+		sum += i;
+	}
  */
 
 
