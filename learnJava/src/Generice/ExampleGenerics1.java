@@ -5,12 +5,12 @@ public class ExampleGenerics1 {
     // generic method printArray
     public static < E > void printArray( E[] inputArray ){
       // 1. Fiecare metoda generica are o sectiune cu tipul parametrului intre <> si este intotdeauna inaintea tipului returnat
-      // 2. Orice sectiune in care se declara parametri ttip va avea , intre parametri. Un parametru tip se mai numeste
-      // variabila tip --> specifica generic type name
-      // 3. Type parametrii pot fi folositi in declaratia tipului returnat si totodata pot sa fie locul de stocare pentru
-      // argumentele transmise metodei generice, care se mai numesc type arguments(argumente tip)
-      // 4. Corpul unei metode este declarat ca orice alta metoda. Type parameters pot reprezenta doar referinte tip si
-      // nicidecum primitive.
+        // 2. Orice sectiune in care se declara parametri ttip va avea , intre parametri. Un parametru tip se mai numeste
+        // variabila tip --> specifica generic type name
+        // 3. Type parametrii pot fi folositi in declaratia tipului returnat si totodata pot sa fie locul de stocare pentru
+        // argumentele transmise metodei generice, care se mai numesc type arguments(argumente tip)
+        // 4. Corpul unei metode este declarat ca orice alta metoda. Type parameters pot reprezenta doar referinte tip si
+        // nicidecum primitive.
         // Display array elements
         for ( E element : inputArray ){
             System.out.println(element );
