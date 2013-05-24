@@ -41,6 +41,17 @@ public class GenericeEx1 {
 
    //     printList(str);
 
+        String stringElement = "stringElement";
+        List<String> stringList = new ArrayList<String>();
+
+        String theElement = addAndReturn(stringElement, stringList);
+
+
+        Integer integerElement = new Integer(123);
+        List<Integer> integerList = new ArrayList<Integer>();
+
+        Integer theElement = addAndReturn(integerElement, integerList);
+
     }
 
     public static <E> void printElement(E e) {
@@ -53,6 +64,9 @@ public class GenericeEx1 {
         }
     }      */
 
+    <R> addAndReturn(R r, List<R> lista){
+
+    }
 
 
 }
