@@ -44,14 +44,16 @@ public class GenericeEx1 {
         String stringElement = "stringElement";
         List<String> stringList = new ArrayList<String>();
 
-        String theStringElement = addAndReturn(stringElement, stringList);
+        List<String> theStringElement = addAndReturn(stringElement, stringList);
 
+        System.out.println(theStringElement);
 
         Integer integerElement = new Integer(123);
         List<Integer> integerList = new ArrayList<Integer>();
 
-        Integer theIntegerElement = addAndR(integerElement, integerList);
+        List<Integer> theIntegerElement = addAndR(integerElement, integerList);
 
+        System.out.println(theIntegerElement);
     }
 
     public static <E> void printElement(E e) {
@@ -64,13 +66,13 @@ public class GenericeEx1 {
         }
     }      */
 
-    List<String> addAndReturn( String s, List<String> lista){
+    static List<String> addAndReturn( String s, List<String> lista){
         //ArrayList<String> listuta = new ArrayList<String>();
         lista.add(s);
         return lista;
     }
 
-    List<Integer> addAndR( Integer i, List<Integer> listuta){
+    static List<Integer> addAndR( Integer i, List<Integer> listuta){
         //ArrayList<Integer> lisa = new ArrayList<Integer>();
         listuta.add(i);
         return listuta;
