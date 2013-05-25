@@ -19,7 +19,9 @@ public class Main {
         cristi.setName("Cristi");                       // apelarea metodei setName cu un string
         System.out.println(cristi);                   // afisam obiectul de cristi tip Student
         cristi.canRead(cristi.age);
+        int cristiAge = cristi.getAge();
 
+        if (cristiAge > 30)
 
         //System.out.println(radu.getPersoana("Radu"));     // afisam rezultatul apelarii metodei getPersoana() cu un string
     }

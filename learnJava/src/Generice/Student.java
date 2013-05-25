@@ -18,7 +18,7 @@ public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa
     }
 
     @Override
-    public void canRead(G g) {
+    public void canRead(G g) {        // afiseaza daca studentul citeste(are 27 de ani) sau nu
         if (g.equals(27)){
             System.out.println("Because this fellow called  " + this.name + " is 27 he can read alright !!! ");
         }
@@ -30,8 +30,24 @@ public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa
 
     @Override
     public G getAgeGap(G g) {
-        G ageGap = null;
 
+        return null;
+    }
+
+    public Integer getAgeGap(int g) {
+        int ageGap = 0;
+      /*  if ( > 30){
+
+        }                       */
+        return ageGap;
+    }
+/*    public void dobreake(U u){
+        System.out.println(u.toString());
+    }
+}              */
+    public String getAgeGap(String g) {
+        String ageGap = "";
+        //if (G.)
         return ageGap;
     }
 
