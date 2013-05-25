@@ -1,16 +1,27 @@
 package Generice;
 // implementam interface Person<P>
-public class Student implements Person<Integer> {
-    protected int age;
+public class Student<G> implements Person<G> {         // vreau sa fac clasa ca sa fie si ea generica
+    protected G age;    // in loc de  -->    protected int age;    --> acuma avem variabila generica age
 
-    protected String name;
+    protected G name;   // in loc de  -->    protected String name;  --> acum avem variabila generica name
 
-   // implementeaza metoda cu tip integer din interfata    -->        public void setPersoana(P persoana);
+    @Override
+    public void setPersoana(G persoana) {
+
+    }
+
+    @Override
+    public G getPersoana(G persoana) {
+
+        return persoana;
+    }
+
+ /*  // implementeaza metoda cu tip integer din interfata    -->        public void setPersoana(P persoana);
     public void setPersoana(Integer persoana) {
 
     }
     // implementeaza metoda cu tip integer din interfata    -->        public P getPersoana(P persoana);
-    public Integer getPersoana(Integer persoana) {
+    public Integer getPersoana(int persoana) {
         age = persoana;
         return age;
     }
@@ -21,11 +32,11 @@ public class Student implements Person<Integer> {
     // implementeaza metoda cu tip string din interfata    -->        public P getPersoana(P persoana);
     public String getPersoana(String persoana) {
         return persoana;
-    }
+    }          */
 
     public Student() {}                         // default constructor
 
-    public Student(int age) {                            // contructuorul variabilei integer age
+  /*  public Student(int age) {                            // contructuorul variabilei integer age
         this.age = age;
     }
 
@@ -51,6 +62,31 @@ public class Student implements Person<Integer> {
     }
 
     public void setName(String name) {                    // setter pentru variabila name
+        this.name = name;
+    }    */
+
+    public Student(G g) {                            // contructuorul variabilei g de tip G
+        this.age = g;
+    }
+
+    public Student(G age, G name) {               // contructuorul pentru variabilele G age si name
+        this.age = age;
+        this.name = name;
+    }
+
+    public G getAge() {                                // getter pentru variabila age de tip G
+        return age;
+    }
+
+    public void setAge(G age) {                          // setter pentru variabila age de tip G
+        this.age = age;
+    }
+
+    public G getName() {                             // getter pentru variabila name de tip G
+        return name;
+    }
+
+    public void setName(G name) {                    // setter pentru variabila name de tip G
         this.name = name;
     }
 
