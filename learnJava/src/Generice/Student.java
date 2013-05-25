@@ -1,7 +1,7 @@
 package Generice;
 // implementam interface Person<P>
 public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa fac clasa ca sa fie si ea generica
-    protected G age;    // in loc de  -->    protected int age;    --> acuma avem variabila generica age
+    protected int age;    // in loc de  -->    protected int age;    --> acuma avem variabila generica age
 
     protected G name;   // in loc de  -->    protected String name;  --> acum avem variabila generica name
 
@@ -30,15 +30,19 @@ public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa
 
     @Override
     public G getAgeGap(G g) {
+        String s;
 
         return null;
     }
 
     public Integer getAgeGap(int g) {
         int ageGap = 0;
-      /*  if ( > 30){
-
-        }                       */
+     //   if ( this.age > 9){
+            ageGap = ( this.age /10 ) * 10;
+     /*   }
+        else{
+            ageGap = 0;
+        }             */
         return ageGap;
     }
 /*    public void dobreake(U u){
@@ -100,20 +104,20 @@ public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa
         this.name = name;
     }    */
 
-    public Student(G g) {                            // contructuorul variabilei g de tip G
+    public Student(int g) {                            // contructuorul variabilei g de tip G
         this.age = g;
     }
 
-    public Student(G age, G name) {               // contructuorul pentru variabilele G age si name
+    public Student(int age, G name) {               // contructuorul pentru variabilele G age si name
         this.age = age;
         this.name = name;
     }
 
-    public G getAge() {                                // getter pentru variabila age de tip G
+    public Integer getAge() {                                // getter pentru variabila age de tip G
         return age;
     }
 
-    public void setAge(G age) {                          // setter pentru variabila age de tip G
+    public void setAge(Integer age) {                          // setter pentru variabila age de tip G
         this.age = age;
     }
 
