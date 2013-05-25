@@ -1,19 +1,38 @@
 package Generice;
 // implementam interface Person<P>
-public class Student<G> implements Person<G> {         // vreau sa fac clasa ca sa fie si ea generica
+public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa fac clasa ca sa fie si ea generica
     protected G age;    // in loc de  -->    protected int age;    --> acuma avem variabila generica age
 
     protected G name;   // in loc de  -->    protected String name;  --> acum avem variabila generica name
 
-    @Override
-    public void setPersoana(G persoana) {
+    protected G persoana;
 
+    @Override                    // implementeaza metoda cu tip G din interfata   -->   public void setPersoana(P persoana);
+    public void setPersoana(G persoana) {
+        this.persoana = persoana;
+    }
+
+    @Override                    // implementeaza metoda cu tip G din interfata   -->   public P getPersoana(P persoana);
+    public G getPersoana(G persoana) {
+        return persoana;
     }
 
     @Override
-    public G getPersoana(G persoana) {
+    public void canRead(G g) {
+        if (g.equals(27)){
+            System.out.println("Because this fellow called  " + this.name + " is 27 he can read alright !!! ");
+        }
+        else {
+            System.out.println("This young fellow  called " + this.name + " has either never learned to read or has " +
+                    "forgotten !!! " + this.name);
+        }
+    }
 
-        return persoana;
+    @Override
+    public G getAgeGap(G g) {
+        G ageGap = null;
+
+        return ageGap;
     }
 
  /*  // implementeaza metoda cu tip integer din interfata    -->        public void setPersoana(P persoana);
@@ -92,8 +111,10 @@ public class Student<G> implements Person<G> {         // vreau sa fac clasa ca 
 
     public String toString() {
         return "Student{" +
-                "age=" + age +
                 ", name='" + name + '\'' +
+                ", age=" + age +
+                ", persoana='" + persoana + '\'' +
                 '}';
     }
+
 }
