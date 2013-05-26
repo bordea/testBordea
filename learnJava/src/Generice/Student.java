@@ -38,7 +38,25 @@ public class Student<G> implements Person<G>, Abilities<G>, IdentityCard<G> {   
 
     }
 
-    @Override
+    public Integer getIdType(Integer g) {
+        int i = 0;
+        if (g>19){
+            if (g>29){
+                i = 3;
+            }
+            else i = 2;
+        }
+        else i = 1;
+        return i;
+    }
+
+    public String getIdType(Student g) {
+        if (this.age >20 ){
+            return "Buletin";
+        }
+        else return "Carnet de Elev";
+    }
+
     public G getIdType(G g) {
         return null;
     }

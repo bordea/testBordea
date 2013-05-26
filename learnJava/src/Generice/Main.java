@@ -33,7 +33,8 @@ public class Main<G> {
         cristi.hasID(cristi.age);
         dana.hasID(dana.age);
 
-
+        String raduId, cristiId, danaId;
+        raduId = radu.getIdType(radu.age);
 
     }
 }
