@@ -1,6 +1,6 @@
 package Generice;
 // implementam interface Person<P>
-public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa fac clasa ca sa fie si ea generica
+public class Student<G> implements Person<G>, Abilities<G>, IdentityCard<G> {         // vreau sa fac clasa ca sa fie si ea generica
     protected int age;    // in loc de  -->    protected int age;    --> acuma avem variabila generica age
 
     protected G name;   // in loc de  -->    protected String name;  --> acum avem variabila generica name
@@ -137,4 +137,13 @@ public class Student<G> implements Person<G>, Abilities<G> {         // vreau sa
                 '}';
     }
 
+    @Override
+    public void hasID(G g) {
+
+    }
+
+    @Override
+    public G getIdType(G g) {
+
+    }
 }
