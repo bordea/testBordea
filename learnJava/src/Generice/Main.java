@@ -1,6 +1,6 @@
 package Generice;
 
-public class Main {
+public class Main<G> {
     public static void main(String[] args) {
         Student radu = new Student();
         Student cristi = new Student();               // daca avem  Person cristi = new Student(); n putem implementa setAge si setName
@@ -22,9 +22,18 @@ public class Main {
         cristi.canRead(cristi.age);
         int cristiAge = cristi.getAge();
         System.out.println(cristi.name + " este in grupul de varsta " + cristi.getAgeGap(cristi.age));
-
-
-
         //System.out.println(radu.getPersoana("Radu"));     // afisam rezultatul apelarii metodei getPersoana() cu un string
+
+        Student dana = new Student();
+        dana.setPersoana(123);
+        dana.setAge(18);                              // apelarea metodei setAge cu un Integer
+        dana.setName("Dana");
+
+        radu.hasID(radu.age);
+        cristi.hasID(cristi.age);
+        dana.hasID(dana.age);
+
+
+
     }
 }

@@ -29,6 +29,21 @@ public class Student<G> implements Person<G>, Abilities<G>, IdentityCard<G> {   
     }
 
     @Override
+    public void hasID(G g) {
+        if (this.age > 20){
+            System.out.println(this.name + "Has Id because the age is over 20 --> " + this.age);
+        }else{
+            System.out.println(this.name + "Cum sa aiba ID la doar  " + this.age + " ani !?!?");
+        }
+
+    }
+
+    @Override
+    public G getIdType(G g) {
+        return null;
+    }
+
+    @Override
     public G getAgeGap(G g) {
         String s;
 
@@ -137,13 +152,4 @@ public class Student<G> implements Person<G>, Abilities<G>, IdentityCard<G> {   
                 '}';
     }
 
-    @Override
-    public void hasID(G g) {
-
-    }
-
-    @Override
-    public G getIdType(G g) {
-
-    }
 }
