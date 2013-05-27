@@ -51,7 +51,7 @@ public class Student<G> implements Person<G>, Abilities<G>, IdentityCard<G> {   
     }
 
     public String getIdType(Student g) {
-        if (this.age >20 ){
+        if (g.age >20 ){
             return "Buletin";
         }
         else return "Carnet de Elev";

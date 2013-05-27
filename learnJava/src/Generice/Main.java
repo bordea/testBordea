@@ -33,8 +33,9 @@ public class Main<G> {
         cristi.hasID(cristi.age);
         dana.hasID(dana.age);
 
-        String raduId, cristiId, danaId;
-        raduId = radu.getIdType(radu.age);
+        System.out.println(radu.name + " are urmatorul id --> " + radu.getIdType(radu));
+        System.out.println(cristi.name + " are urmatorul id --> " + cristi.getIdType(cristi));
+        System.out.println(dana.name + " are urmatorul id --> " + dana.getIdType(dana));
 
     }
 }
