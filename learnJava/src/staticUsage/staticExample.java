@@ -4,6 +4,12 @@ class StaticVariableTest{
     static int var1 = 1;
 }
 
+class SquareValue{
+    static void square(){
+        StaticVariableTest.var1 = StaticVariableTest.var1 * StaticVariableTest.var1;
+    }
+}
+
 public class staticExample {
 
     public static void main(String[] args){
@@ -26,6 +32,16 @@ public class staticExample {
 
         svt2.var1 = 25;
         System.out.println("svt1 --> " + svt1.var1 +  " || svt2 --> " + svt2.var1);
+
+        SquareValue sv = new SquareValue();
+        System.out.println("var1 before the square " + svt2.var1);
+        sv.square();
+        System.out.println("var1 after the square call --> " + StaticVariableTest.var1);
+
+        svt2.var1 = 25;
+        System.out.println("var1 before the square " + svt2.var1);
+        SquareValue.square();
+        System.out.println("var1 after the square call --> " + StaticVariableTest.var1);
 
     }
 }
