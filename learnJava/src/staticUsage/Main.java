@@ -1,12 +1,5 @@
 package staticUsage;
 
-/**
- * Created with IntelliJ IDEA.
- * User: David
- * Date: 5/27/13
- * Time: 8:43 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Main {
 
     public static void main(String[] args){
@@ -18,11 +11,12 @@ public class Main {
         int max2 = i.MAX_VALUE;
 
         System.out.println(max);
+
     }
 }
 
 class Temperatura {
-    int temperaturaDimienata;
+    int temperaturaDimineata;
     int temperaturaSerar;
 
     static int FREEZE_TEM = 0;
@@ -33,6 +27,6 @@ class Temperatura {
     }
 
     int getTemperaturaDimienata() {
-        return temperaturaDimienata;
+        return temperaturaDimineata;
     }
 }
