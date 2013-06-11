@@ -9,6 +9,10 @@ class Letter {
     String s;
 }
 
+class Value {
+    int i;
+}
+
 public class Main {
     public static void main (String args[]){
         System.out.println("Printing through syntax");
@@ -51,12 +55,25 @@ public class Main {
 
         int i = 1;
         print("i --> " + i);
-        print("PREincrement --> ++i --> " + ++i); // Pre-increment
-        print("POSTincrement --> i++ --> " + i++); // Post-increment
+        print("PREincrement --> ++i --> " + ++i); // Pre-increment     --> the incrementation is done before the printing
+        print("POSTincrement --> i++ --> " + i++); // Post-increment   --> the incrementation is done after the printing
         print("i --> " + i);
-        print("PREdecrement --> --i : " + --i); // Pre-decrement
-        print("POSTdecrement --> i-- : " + i--); // Post-decrement
+        print("PREdecrement --> --i : " + --i); // Pre-decrement  --> the decrementation is done before the printing
+        print("POSTdecrement --> i-- : " + i--); // Post-decrement   --> the decrementation is being done after the printing
         print("i --> " + i);
+
+        Integer n1 = new Integer(47);  // n1 and n2 have the same value(content) but this doesn't mean that they have the same reference
+        Integer n2 = new Integer(47);  // n1 will have its own reference and n2 will have its own refeence
+        System.out.println("n1 == n2 -->  " + (n1 == n2));  // this will return false because the n1's reference is different to n2's reference
+        System.out.println("n1 != n2 -->  " + (n1 != n2));  // this will return true because n1 and n2 have two different references
+        System.out.println("n1.equals(n2) -->  " + n1.equals(n2)); // we are using the equals method to compare the contents of the two
+                                                        // objects so it returns true
+        Value v1 = new Value();
+        Value v2 = new Value();       // v1 and v2 have different references
+        v1.i = v2.i = 100;            // v1 and v2 still have different references because we've only given value to v1.i and v2.i
+        System.out.println("v1.equals(v2) -->  " + v1.equals(v2));  // false because they have a reference each
+        v1=v2;
+        System.out.println("v1.equals(v2) -->  " + v1.equals(v2));  // true because now they have the same reference
     }
 
     static void f(Letter y) {
