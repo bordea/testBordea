@@ -4,6 +4,11 @@ class Tank {
     int level;
 }
 
+class Letter {
+    char c;
+    String s;
+}
+
 public class Main {
     public static void main (String args[]){
         System.out.println("Printing through syntax");
@@ -37,7 +42,22 @@ public class Main {
         print("t3.level--> " + t3.level + "|| t4.level--> " + t4.level);  // the other one remains the same
         t4.level = 77;                      // becuse we don't have the same reference for t3 and t4 when one of them changes
         print("t3.level--> " + t3.level + "|| t4.level--> " + t4.level);  // the other one remains the same
+
+        Letter x = new Letter();
+        x.c = 'a';
+        print("x.c--> " + x.c);
+        f(x);
+        print("x.c--> " + x.c);
     }
+
+    static void f(Letter y) {
+        y.c = 'z';
+    }
+
+ /*   static String ff(Letter y){
+        y.s = y.c + y.c;
+        return y.s;
+    } */
 
     public static void print(String s){
         System.out.println(s);
