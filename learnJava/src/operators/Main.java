@@ -74,6 +74,10 @@ public class Main {
         System.out.println("v1.equals(v2) -->  " + v1.equals(v2));  // false because they have a reference each
         v1=v2;
         System.out.println("v1.equals(v2) -->  " + v1.equals(v2));  // true because now they have the same reference
+
+        ShortCircuit sc = new ShortCircuit();
+        boolean bool = sc.test1(0) && sc.test2(2) && sc.test3(2);
+        print("expression is " + bool);
     }
 
     static void f(Letter y) {
