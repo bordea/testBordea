@@ -78,6 +78,13 @@ public class Main {
         ShortCircuit sc = new ShortCircuit();
         boolean bool = sc.test1(0) && sc.test2(2) && sc.test3(2);
         print("expression is " + bool);
+
+        boolean boo = sc.t1(0) && sc.t2(1) && sc.t3(3);     // boo va primi valoarea true daca toate sunt true si va evalua toate
+        print("boo -->  " + boo);            // metodele pe rand si daca gaseste false se opreste si nu merge mai departe
+
+        boolean bo = sc.t1(5) && sc.t2(8) && sc.t3(3);     // boo va primi valoarea true daca toate sunt true si va evalua toate
+        print("boo -->  " + bo);            // metodele pe rand si daca gaseste false se opreste si nu merge mai departe
+                                            // t3 nu se mai executa deoarece t2 a returnat false
     }
 
     static void f(Letter y) {
