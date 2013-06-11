@@ -94,6 +94,16 @@ public class Main {
             print(ternaryIf(k));
         }
 
+        int xx = 0, yy = 1, zz = 2;
+        String ss = "xx, yy, zz "; // whenever the " double quotes are used the compiler will see whatever is between the " " as String
+        print(ss + xx + yy + zz);  // Converts ss, xx, yy and zz to a String automatically
+        print(xx + " " + ss);
+        ss += "(summed) = ";       // Concatenation operator --> adds the String to ss
+        print ("ss --> " + ss);
+        print(ss + (xx + yy + zz)); // using the paranthesis we can have operation efectuated first before the conversion to String
+        print("" + xx);                 // Shorthand for Integer.toString()
+        print(Integer.toString(xx));    // this does the sam thing with the line above so we could've used "" + whatever needs printing
+
 
     }
 
