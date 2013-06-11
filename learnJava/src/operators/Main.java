@@ -85,6 +85,20 @@ public class Main {
         boolean bo = sc.t1(5) && sc.t2(8) && sc.t3(3);     // boo va primi valoarea true daca toate sunt true si va evalua toate
         print("boo -->  " + bo);            // metodele pe rand si daca gaseste false se opreste si nu merge mai departe
                                             // t3 nu se mai executa deoarece t2 a returnat false
+
+        float f1 = 1e-43f;
+        System.out.println(f1);
+       //  float f2 = 1e-43;   // without the f at the end the compiler will give us an error
+
+        for (int k=1; k<11; k++){
+            print(ternaryIf(k));
+        }
+
+
+    }
+
+    static int ternaryIf(int i){
+        return (i%2 == 0) ? i * 10 : i * 7;
     }
 
     static void f(Letter y) {
