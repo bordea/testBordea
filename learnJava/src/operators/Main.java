@@ -48,10 +48,19 @@ public class Main {
         print("x.c--> " + x.c);
         f(x);
         print("x.c--> " + x.c);
+
+        int i = 1;
+        print("i --> " + i);
+        print("PREincrement --> ++i --> " + ++i); // Pre-increment
+        print("POSTincrement --> i++ --> " + i++); // Post-increment
+        print("i --> " + i);
+        print("PREdecrement --> --i : " + --i); // Pre-decrement
+        print("POSTdecrement --> i-- : " + i--); // Post-decrement
+        print("i --> " + i);
     }
 
     static void f(Letter y) {
-        y.c = 'z';
+        y.c = 'z';                      // the outside object is being changed with this assignment
     }
 
  /*   static String ff(Letter y){
