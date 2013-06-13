@@ -20,6 +20,21 @@ public class UncondBranch {
                 break;
             }
         }
+
+        for(int i = 123456789; i > 2000; i=i/13) {
+            if (i%4>0){
+                continue;
+
+            }
+            System.out.println("Numar divizilbil cu 4 --> "+ i);
+        }
+        for(int i = 123456789; i > 2000; i=i/13) {
+            if (i%4>0){
+                continue;
+
+            }
+            System.out.println("Numar divizilbil cu 4 --> "+ i);
+        }
     }
 
     public static String testareMasini(int i){
