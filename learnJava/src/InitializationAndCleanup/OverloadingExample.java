@@ -19,6 +19,14 @@ class Chiatra {
     void details(String s){
         System.out.println(s + " : Piatra are " + weight + " kilograme ! ");
     }
+
+    void details(int i, String s){
+        System.out.println("Chiatra este de calitatea " + i + " si este de forma " + s);
+    }
+
+    void details(String s, int i){
+        System.out.println("Chiatra asta se numeste " + s + " si se gaseste in  " + i + " locuri in lume");
+    }
 }
 
 public class OverloadingExample {
@@ -36,6 +44,10 @@ public class OverloadingExample {
             ch.details();
             ch.details("METODA OVERLOAD");
         }
+
+        Chiatra ch = new Chiatra();
+        ch.details(12,"Rotunda");
+        ch.details("Emerald",2);
     }
 
 
