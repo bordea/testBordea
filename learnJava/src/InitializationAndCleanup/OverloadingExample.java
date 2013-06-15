@@ -27,6 +27,19 @@ class Chiatra {
     void details(String s, int i){
         System.out.println("Chiatra asta se numeste " + s + " si se gaseste in  " + i + " locuri in lume");
     }
+
+    String info(){
+        String ss = "Method that returns a String";
+        return ss;
+    }
+
+ /*   void info(){
+        System.out.println("VOID VOID VOID");
+    }          */
+
+    void info (String s){
+        System.out.println(s + "String passed on");
+    }
 }
 
 public class OverloadingExample {
@@ -48,6 +61,10 @@ public class OverloadingExample {
         Chiatra ch = new Chiatra();
         ch.details(12,"Rotunda");
         ch.details("Emerald",2);
+
+        System.out.println(ch.info());
+        ch.info();                               // this doesn't do anything
+        ch.info("Merge? ");
     }
 
 
